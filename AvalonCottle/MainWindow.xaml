@@ -3,10 +3,66 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         xmlns:local="clr-namespace:AvalonCottle"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <ToolBar.Resources>
+                <Style TargetType="{x:Type Image}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}, AncestorLevel=1}, Path=IsEnabled}" Value="False">
+                            <Setter Property="Opacity" Value="0.30" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ToolBar.Resources>
+            <Button Click="openFileClick">
+                <Image Source="Images/Open.png" Height="16"/>
+            </Button>
+            <Button Click="saveFileClick">
+                <Image Source="Images/Save.png" Height="16"/>
+            </Button>
+            <Separator/>
+            <Button Command="Cut">
+                <Image Source="Images/Cut.png" Height="16"/>
+            </Button>
+            <Button Command="Copy">
+                <Image Source="Images/Copy.png" Height="16"/>
+            </Button>
+            <Button Command="Paste">
+                <Image Source="Images/Paste.png" Height="16"/>
+            </Button>
+            <Button Command="Delete">
+                <Image Source="Images/Delete.png" Height="16"/>
+            </Button>
+            <Separator/>
+            <Button Command="Undo">
+                <Image Source="Images/Undo.png" Height="16"/>
+            </Button>
+            <Button Command="Redo">
+                <Image Source="Images/Redo.png" Height="16"/>
+            </Button>
+            <Separator/>
+            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=WordWrap}">
+                <Image Source="Images/WordWrap.png" Height="16"/>
+            </CheckBox>
+            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
+                <TextBlock Width="16" TextAlignment="Center">#</TextBlock>
+            </CheckBox>
+            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=Options.ShowEndOfLine}">
+                <TextBlock Width="16" TextAlignment="Center">¶</TextBlock>
+            </CheckBox>
+        </ToolBar>
+        <avalonEdit:TextEditor
+            Name="textEditor"
+            FontFamily="Consolas"
+            FontSize="10pt"
+            HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"
+            SyntaxHighlighting="Cottle"
+        >
+            Welcome to AvalonEdit! Use ctrl+F to search and dot to demo text completion.
+        </avalonEdit:TextEditor>
+    </DockPanel>
 </Window>
