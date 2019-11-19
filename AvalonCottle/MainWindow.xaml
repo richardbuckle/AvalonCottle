@@ -59,6 +59,7 @@
             Name="textEditor"
             FontFamily="Consolas"
             FontSize="10pt"
+            Foreground="MidnightBlue"
             HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"
             SyntaxHighlighting="Cottle"
         >
