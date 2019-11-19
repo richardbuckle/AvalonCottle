@@ -1,4 +1,4 @@
-﻿{_ Welcome to AvalonEdit! Use ctrl+F to search and dot to demo text completion.}
+﻿{_ Welcome to AvalonEdit! Use Ctrl+F to search and dot to demo text completion.}
 
 {_ Context }
 {SetState('eddi_context_last_subject', 'data_voucher')}

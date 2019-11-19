@@ -64,7 +64,7 @@
             HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"
             SyntaxHighlighting="Cottle"
         >
-            Welcome to AvalonEdit! Use ctrl+F to search and dot to demo text completion.
+            Welcome to AvalonEdit! Use Ctrl+F to search and dot to demo text completion.
         </avalonEdit:TextEditor>
     </DockPanel>
 </Window>
