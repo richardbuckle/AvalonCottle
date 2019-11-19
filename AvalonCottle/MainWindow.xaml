@@ -58,7 +58,7 @@
         <avalonEdit:TextEditor
             Name="textEditor"
             FontFamily="Georgia"
-            FontSize="11pt"
+            FontSize="10pt"
             Foreground="DarkSlateGray"
             Background="WhiteSmoke"
             HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"

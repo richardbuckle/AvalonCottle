@@ -4,8 +4,8 @@
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" fontFamily="Consolas" foreground="Firebrick"/>
   <Color name="Keyword" fontFamily="Consolas" foreground="Blue" />
-  <Color name="Delimiter" fontFamily="Consolas" foreground="HotPink" fontWeight="bold"/>
-  <Color name="Literals" fontFamily="Consolas" foreground="OrangeRed"/>
+  <Color name="Delimiter" fontFamily="Consolas" foreground="Blue"/>
+  <Color name="Literals" fontFamily="Consolas" foreground="Purple"/>
 
   <!-- This is the main ruleset. -->
   <RuleSet>
