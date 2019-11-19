@@ -57,7 +57,7 @@
         </ToolBar>
         <avalonEdit:TextEditor
             Name="textEditor"
-            FontFamily="Georgia"
+            FontFamily="Consolas"
             FontSize="10pt"
             Foreground="DarkSlateGray"
             Background="WhiteSmoke"
