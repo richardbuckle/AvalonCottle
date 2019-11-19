@@ -21,6 +21,10 @@
         <!-- nested span for escape sequences -->
         <Span begin="\\" end="." />
 
+        <Rule color="Delimiter">
+          [{|:}]
+        </Rule>
+
         <!-- String literals are treated as body text -->
         <Span color="Body text">
           <Begin>"</Begin>
@@ -31,8 +35,18 @@
           </RuleSet>
         </Span>
 
+        <Span color="Body text">
+          <Begin>'</Begin>
+          <End>'</End>
+          <RuleSet>
+            <!-- nested span for escape sequences -->
+            <Span begin="\\" end="." />
+          </RuleSet>
+        </Span>
+
         <Keywords color="Keyword">
           <Word>if</Word>
+          <Word>elif</Word>
           <Word>else</Word>
           <!-- ... -->
         </Keywords>
@@ -43,6 +57,14 @@
           |    \.[0-9]+         #or just starting with floating point
           )
         </Rule>
+
+        <!-- Other literals-->
+        <Keywords color="Literals">
+          <Word>true</Word>
+          <Word>false</Word>
+          <Word>void</Word>
+        </Keywords>
+
       </RuleSet>
     </Span>
 
