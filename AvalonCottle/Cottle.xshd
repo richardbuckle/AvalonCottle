@@ -41,6 +41,10 @@
           <Word>if</Word>
           <Word>elif</Word>
           <Word>else</Word>
+          <Word>for</Word>
+          <Word>while</Word>
+          <Word>empty:</Word>
+          <Word>in</Word>
           <!-- ... -->
         </Keywords>
 
