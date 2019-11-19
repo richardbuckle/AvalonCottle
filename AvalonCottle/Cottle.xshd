@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0"?>
 <SyntaxDefinition name="Cottle" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-  <Color name ="Body text" foreground="MidnightBlue"/>
+  <Color name ="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
-  <Color name="Code" foreground="DarkViolet" />
+  <Color name="Code" foreground="Firebrick" />
   <Color name="Keyword" foreground="Blue" />
-  <Color name="Literals" foreground="Firebrick" />
+  <Color name="Delimiter" foreground="Red" fontWeight="bold"/>
+  <Color name="Literals" foreground="OrangeRed" />
 
   <!-- This is the main ruleset. -->
   <RuleSet>

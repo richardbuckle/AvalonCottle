@@ -58,8 +58,9 @@
         <avalonEdit:TextEditor
             Name="textEditor"
             FontFamily="Consolas"
-            FontSize="10pt"
-            Foreground="MidnightBlue"
+            FontSize="11pt"
+            Foreground="DarkSlateGray"
+            Background="GhostWhite"
             HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"
             SyntaxHighlighting="Cottle"
         >
