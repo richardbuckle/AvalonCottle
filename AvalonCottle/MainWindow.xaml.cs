@@ -47,6 +47,18 @@ namespace AvalonCottle
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
             SearchPanel.Install(textEditor);
+
+            using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("AvalonCottle.Data voucher redeemed.cottle"))
+            {
+                if (s != null)
+                {
+                    using (StreamReader reader = new StreamReader(s))
+                    {
+                        textEditor.Text = reader.ReadToEnd();
+                    }
+                }
+
+            }
         }
 
         void openFileClick(object sender, RoutedEventArgs e)

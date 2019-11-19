@@ -1,0 +1,34 @@
+﻿{_ Welcome to AvalonEdit! Use ctrl+F to search and dot to demo text completion.}
+
+{_ Context }
+{SetState('eddi_context_last_subject', 'data_voucher')}
+{SetState('eddi_context_last_action', 'redeem')}
+{SetState('eddi_context_data_voucher_amount', event.amount)}
+
+{set singular to len(event.rewards) = 1}
+Data 
+{if singular: voucher |else: vouchers}
+for {Humanise(event.amount)} credits
+{Occasionally(2, "{if singular: has |else: have} {Occasionally(2, 'now')} been"))}
+{OneOf("redeemed", "claimed")}
+{Occasionally(2, "
+  {if len(event.rewards) = 1 && len(event.rewards[0].faction) > 0:
+    {OneOf("by", "courtesy of")}
+    {P(event.rewards[0].faction)}
+  |else:
+    {if len(event.rewards[0].faction) > 0:
+       {OneOf("by", "courtesy of")}
+       {set cur to 0}
+       {while cur < len(event.rewards):
+          {if cur = 0:
+          |elif cur < len(event.rewards) - 1:
+              , 
+          |else:
+              and
+          }
+          {P(event.rewards[cur].faction)}
+          {set cur to cur + 1}
+       }
+    }
+  }
+")}.
