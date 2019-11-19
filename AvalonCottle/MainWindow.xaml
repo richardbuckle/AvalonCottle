@@ -6,7 +6,7 @@
         xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         xmlns:local="clr-namespace:AvalonCottle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="untitled" Height="800" Width="800" WindowStyle="ThreeDBorderWindow" ResizeMode="CanResizeWithGrip">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
             <ToolBar.Resources>

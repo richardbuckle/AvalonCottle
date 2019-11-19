@@ -70,6 +70,7 @@ namespace AvalonCottle
             if (dlg.ShowDialog() ?? false)
             {
                 currentFileName = dlg.FileName;
+                this.Title = Path.GetFileName(currentFileName);
                 textEditor.Load(currentFileName);
                 textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(Path.GetExtension(currentFileName));
             }
