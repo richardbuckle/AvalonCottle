@@ -2,10 +2,11 @@
 <SyntaxDefinition name="Cottle" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
   <Color name ="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
-  <Color name="Code" foreground="Firebrick"/>
-  <Color name="Keyword" foreground="Blue" />
-  <Color name="Delimiter" foreground="Blue"/>
-  <Color name="Literals" foreground="Purple"/>
+  <Color name="Code" foreground="Purple"/>
+  <Color name="Keyword" foreground="Blue"/>
+  <Color name="Operator" foreground="Teal"/>
+  <Color name="Delimiter" foreground="IndianRed" fontWeight="bold"/>
+  <Color name="Literals" foreground="Firebrick"/>
 
   <!-- This is the main ruleset. -->
   <RuleSet>
@@ -46,6 +47,16 @@
           <Word>empty:</Word>
           <Word>in</Word>
           <!-- ... -->
+        </Keywords>
+
+        <Keywords color="Operator">
+          <Word>+</Word>
+          <Word>-</Word>
+          <Word>*</Word>
+          <Word>/</Word>
+          <Word>%</Word>
+          <Word>&lt;</Word>
+          <Word>&gt;</Word>
         </Keywords>
 
         <!-- Digits -->
