@@ -35,3 +35,6 @@ for {Humanise(event.amount)} credits
 
 Here is more body text. {_and a comment}
 Literals like 2.3 and keywords like else are not colored in body text.
+
+{dump("Double-quoted string with \"escape\" codes can use 'single' quotes.")}
+{dump("Single-quoted string with \'escape\' codes can use "double" quotes.)}

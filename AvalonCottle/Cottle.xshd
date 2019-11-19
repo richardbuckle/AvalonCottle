@@ -1,47 +1,38 @@
 ﻿<?xml version="1.0"?>
 <SyntaxDefinition name="Cottle" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-  <Color name ="Body text" foreground="DarkSlateGray"/>
+  <Color name ="Body text" fontFamily="Georgia" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
-  <Color name="Code" foreground="Firebrick" />
-  <Color name="Keyword" foreground="Blue" />
-  <Color name="Delimiter" foreground="Red" fontWeight="bold"/>
-  <Color name="Literals" foreground="OrangeRed" />
+  <Color name="Code" fontFamily="Consolas" foreground="Firebrick"/>
+  <Color name="Keyword" fontFamily="Consolas" foreground="Blue" />
+  <Color name="Delimiter" fontFamily="Consolas" foreground="HotPink" fontWeight="bold"/>
+  <Color name="Literals" fontFamily="Consolas" foreground="OrangeRed"/>
 
   <!-- This is the main ruleset. -->
   <RuleSet>
-    <Span color="Comment" multiline="true" begin="{_" end="}">
-      <RuleSet>
-        <!-- nested span for escape sequences -->
-        <Span begin="\\" end="." />
-      </RuleSet>
-    </Span>
+    <!-- escape sequences -->
+    <Span begin="\\" end="."/>
 
-    <Span color="Code" multiline="true" begin="{" end="}">
+    <!-- comments -->
+    <Span color="Comment" multiline="true" begin="{_" end="}"/>
+
+    <!-- code -->
+    <Span color="Code" fontFamily="Consolas" multiline="true" begin="{" end="}">
       <RuleSet>
-        <!-- nested span for escape sequences -->
-        <Span begin="\\" end="." />
 
         <Rule color="Delimiter">
           [{|:}]
         </Rule>
 
-        <!-- String literals are treated as body text -->
-        <Span color="Body text">
+        <!-- String literals are treated as body text and reference this file's main ruleset -->
+        <Span color="Body text" ruleSet="">
           <Begin>"</Begin>
           <End>"</End>
-          <RuleSet>
-            <!-- nested span for escape sequences -->
-            <Span begin="\\" end="." />
-          </RuleSet>
         </Span>
 
-        <Span color="Body text">
+        <!-- Same for single-quoted strings -->
+        <Span color="Body text" ruleSet="">
           <Begin>'</Begin>
           <End>'</End>
-          <RuleSet>
-            <!-- nested span for escape sequences -->
-            <Span begin="\\" end="." />
-          </RuleSet>
         </Span>
 
         <Keywords color="Keyword">

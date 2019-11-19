@@ -57,10 +57,10 @@
         </ToolBar>
         <avalonEdit:TextEditor
             Name="textEditor"
-            FontFamily="Consolas"
+            FontFamily="Georgia"
             FontSize="11pt"
             Foreground="DarkSlateGray"
-            Background="GhostWhite"
+            Background="WhiteSmoke"
             HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"
             SyntaxHighlighting="Cottle"
         >
