@@ -5,7 +5,7 @@
   <Color name="Code" foreground="Purple"/>
   <Color name="Keyword" foreground="Red"/>
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
-  <Color name="Delimiter" foreground="MediumBlue" fontWeight="bold"/>
+  <Color name="Delimiter" foreground="Firebrick" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
 
   <!-- This is the main ruleset. -->
@@ -37,6 +37,11 @@
           <Begin color="Delimiter">'</Begin>
           <End color="Delimiter">'</End>
         </Span>
+
+        <!--if|elif|else naive rule -->
+        <Rule>
+          if foo .* elif .* else .*
+        </Rule>
 
         <Keywords color="Keyword">
           <Word>if</Word>
