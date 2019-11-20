@@ -3,8 +3,8 @@
   <Color name ="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" foreground="Purple"/>
-  <Color name="Keyword" foreground="Blue"/>
-  <Color name="Operator" foreground="Blue"/>
+  <Color name="Keyword" foreground="Red"/>
+  <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
   <Color name="Delimiter" foreground="MediumBlue" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
 
@@ -55,6 +55,8 @@
           <Word>*</Word>
           <Word>/</Word>
           <Word>%</Word>
+          <Word>&amp;&amp;</Word>
+          <Word>||</Word>
           <Word>&lt;</Word>
           <Word>&gt;</Word>
         </Keywords>
