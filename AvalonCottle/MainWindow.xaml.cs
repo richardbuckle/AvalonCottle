@@ -112,10 +112,9 @@ namespace AvalonCottle
                 completionWindow = new CompletionWindow(textEditor.TextArea);
                 // provide AvalonEdit with the data:
                 IList<ICompletionData> data = completionWindow.CompletionList.CompletionData;
-                data.Add(new MyCompletionData("Item1"));
-                data.Add(new MyCompletionData("Item2"));
-                data.Add(new MyCompletionData("Item3"));
-                data.Add(new MyCompletionData("Another item"));
+                data.Add(new MyCompletionData("alpha"));
+                data.Add(new MyCompletionData("beta"));
+                data.Add(new MyCompletionData("gamma"));
                 completionWindow.Show();
                 completionWindow.Closed += delegate
                 {
