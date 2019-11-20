@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0"?>
 <SyntaxDefinition name="Cottle" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <!-- Documentation: 
+  <http://avalonedit.net/documentation/> 
+  <https://www.codeproject.com/Articles/42490/Using-AvalonEdit-WPF-Text-Editor?msg=4879049#xx4879049xx> 
+  -->
+  
+  <!-- TODO find the best way to set these colors at runtime -->
   <Color name ="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" foreground="Purple"/>
@@ -7,6 +13,9 @@
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
   <Color name="Delimiter" foreground="Blue" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
+  <Color name="Built-in functions" foreground="MediumOrchid"/>
+  <Color name="EDDI functions" foreground="DodgerBlue"/>
+  <Color name="EDDI properties" foreground="LightSeaGreen"/>
 
   <!-- This is the main ruleset. -->
   <RuleSet>
@@ -38,7 +47,7 @@
           <End color="Delimiter">'</End>
         </Span>
 
-        <!--if|elif|else naive rule -->
+        <!--if|elif|else naive rule TODO improve this -->
         <Rule>
           if foo .* elif .* else .*
         </Rule>
@@ -51,7 +60,9 @@
           <Word>while</Word>
           <Word>empty:</Word>
           <Word>in</Word>
-          <!-- ... -->
+          <Word>set</Word>
+          <Word>to</Word>
+          <!-- etc... -->
         </Keywords>
 
         <Keywords color="Operator">
@@ -78,6 +89,32 @@
           <Word>true</Word>
           <Word>false</Word>
           <Word>void</Word>
+        </Keywords>
+
+        <Keywords color="Built-in functions">
+          <Word>len</Word>
+          <Word>max</Word>
+          <Word>min</Word>
+          <Word>cat</Word>
+          <!-- etc... -->
+        </Keywords>
+
+        <Keywords color="EDDI functions">
+          <Word>SetState</Word>
+          <Word>Humanise</Word>
+          <Word>Occasionally</Word>
+          <Word>OneOf</Word>
+          <Word>P</Word>
+          <!-- etc... -->
+        </Keywords>
+
+        <Keywords color="EDDI properties">
+          <Word>event</Word>
+          <Word>rewards</Word>
+          <Word>faction</Word>
+          <Word>orbitalperiod</Word>
+          <Word>stellarclass</Word>
+          <!-- etc... -->
         </Keywords>
 
       </RuleSet>
