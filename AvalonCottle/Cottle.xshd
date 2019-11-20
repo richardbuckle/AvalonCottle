@@ -28,14 +28,14 @@
 
         <!-- String literals are treated as body text and reference this file's main ruleset -->
         <Span color="Body text" ruleSet="">
-          <Begin>"</Begin>
-          <End>"</End>
+          <Begin color="Delimiter">"</Begin>
+          <End color="Delimiter">"</End>
         </Span>
 
         <!-- Same for single-quoted strings -->
         <Span color="Body text" ruleSet="">
-          <Begin>'</Begin>
-          <End>'</End>
+          <Begin color="Delimiter">'</Begin>
+          <End color="Delimiter">'</End>
         </Span>
 
         <Keywords color="Keyword">
