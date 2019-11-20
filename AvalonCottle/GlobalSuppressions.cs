@@ -5,3 +5,5 @@
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "Usually invalid", Scope = "member", Target = "~M:AvalonCottle.MainWindow.#ctor")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "Usually invalid", Scope = "member", Target = "~M:AvalonCottle.MainWindow.SetupAvalonEdit")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "Usually invalid", Scope = "member", Target = "~M:AvalonCottle.MainWindow.RegisterCottleDefinition")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "<Pending>", Scope = "member", Target = "~M:AvalonCottle.MainWindow.LoadDefaultText")]
