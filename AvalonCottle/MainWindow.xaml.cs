@@ -36,6 +36,11 @@ namespace AvalonCottle
                     customHighlighting = ICSharpCode.AvalonEdit.Highlighting.Xshd.HighlightingLoader.Load(reader, HighlightingManager.Instance);
                 }
             }
+
+            // tweak a color
+            HighlightingColor commentColor = customHighlighting.GetNamedColor("Comment");
+            commentColor.Background = new SimpleHighlightingBrush(Colors.Bisque);
+
             // and register it in the HighlightingManager
             HighlightingManager.Instance.RegisterHighlighting("Cottle", new string[] { ".cottle" }, customHighlighting);
 
