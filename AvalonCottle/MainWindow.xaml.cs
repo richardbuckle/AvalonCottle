@@ -18,7 +18,7 @@ namespace AvalonCottle
     public partial class MainWindow : Window
     {
         CompletionWindow completionWindow;
-        private string currentFileName;
+        private string currentFilePath;
 
         public MainWindow()
         {
@@ -65,6 +65,7 @@ namespace AvalonCottle
             }
         }
 
+        #region File handling
         void openFileClick(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog
@@ -74,16 +75,16 @@ namespace AvalonCottle
             };
             if (dlg.ShowDialog() ?? false)
             {
-                currentFileName = dlg.FileName;
-                this.Title = Path.GetFileName(currentFileName);
-                textEditor.Load(currentFileName);
-                textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(Path.GetExtension(currentFileName));
+                currentFilePath = dlg.FileName;
+                refreshWindowTitle();
+                textEditor.Load(currentFilePath);
+                textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(Path.GetExtension(currentFilePath));
             }
         }
 
         void saveFileClick(object sender, EventArgs e)
         {
-            if (currentFileName == null)
+            if (currentFilePath == null)
             {
                 SaveFileDialog dlg = new SaveFileDialog
                 {
@@ -93,28 +94,37 @@ namespace AvalonCottle
                 };
                 if (dlg.ShowDialog() ?? false)
                 {
-                    currentFileName = dlg.FileName;
+                    currentFilePath = dlg.FileName;
                 }
                 else
                 {
                     return;
                 }
             }
-            textEditor.Save(currentFileName);
-            this.Title = Path.GetFileName(currentFileName);
+            textEditor.Save(currentFilePath);
+            refreshWindowTitle();
         }
 
+        private void refreshWindowTitle()
+        {
+            Title = Path.GetFileName(currentFilePath);
+        }
+        #endregion
+
+        #region Input handling
         void textEditor_TextArea_TextEntered(object sender, TextCompositionEventArgs e)
         {
+            // open code completion after the user has pressed dot:
             if (e.Text == ".")
             {
-                // open code completion after the user has pressed dot:
                 completionWindow = new CompletionWindow(textEditor.TextArea);
+
                 // provide AvalonEdit with the data:
                 IList<ICompletionData> data = completionWindow.CompletionList.CompletionData;
                 data.Add(new MyCompletionData("alpha"));
                 data.Add(new MyCompletionData("beta"));
                 data.Add(new MyCompletionData("gamma"));
+
                 completionWindow.Show();
                 completionWindow.Closed += delegate
                 {
@@ -136,5 +146,6 @@ namespace AvalonCottle
             }
             // do not set e.Handled=true - we still want to insert the character that was typed
         }
+        #endregion
     }
 }
