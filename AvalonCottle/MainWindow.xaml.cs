@@ -63,7 +63,7 @@ namespace AvalonCottle
 
         private void LoadDefaultText()
         {
-            using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("AvalonCottle.Data voucher redeemed.cottle"))
+            using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("AvalonCottle.DemoContent.cottle"))
             {
                 if (s == null) {return;}
                 using (StreamReader reader = new StreamReader(s))

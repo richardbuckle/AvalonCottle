@@ -16,7 +16,9 @@
   <Color name="EDDI functions" foreground="DodgerBlue"/>
   <Color name="EDDI properties" foreground="LightSeaGreen"/>
 
-  <!-- This is the main ruleset. -->
+  <!-- 
+    This is the main rule set: it describes body text and is referenced recursively. 
+    Only code (including comments) can drop us down from this level.-->
   <RuleSet>
     <!-- escape sequences -->
     <Span begin="\\" end="."/>
@@ -31,6 +33,7 @@
     </Span>
   </RuleSet>
 
+  <!-- This is the code rule set. It can contain code, comments and keywords. -->
   <RuleSet name="Code">
     <!-- comments -->
     <Span color="Comment" multiline="true" begin="{_" end="}"/>
@@ -52,7 +55,10 @@
       <End color="Delimiter">'</End>
     </Span>
 
-    <!--if|elif|else naive rule TODO improve this -->
+    <!--
+    if|elif|else naive rule 
+    TODO improve this 
+    -->
     <Rule>
       if foo .* elif .* else .*
     </Rule>
@@ -106,6 +112,7 @@
       <Word>max</Word>
       <Word>min</Word>
       <Word>cat</Word>
+      <Word>dump</Word>
       <!-- etc... -->
     </Keywords>
 

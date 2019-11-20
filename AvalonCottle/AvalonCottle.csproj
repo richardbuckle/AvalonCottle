@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <None Remove="Cottle.xshd" />
-    <None Remove="Data voucher redeemed.cottle" />
+    <None Remove="DemoContent.cottle" />
     <None Remove="Images\Copy.png" />
     <None Remove="Images\Cut.png" />
     <None Remove="Images\Delete.png" />
@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Cottle.xshd" />
-    <EmbeddedResource Include="Data voucher redeemed.cottle" />
+    <EmbeddedResource Include="DemoContent.cottle" />
   </ItemGroup>
 
   <ItemGroup>
