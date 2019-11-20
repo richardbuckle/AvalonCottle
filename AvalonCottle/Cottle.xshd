@@ -31,6 +31,8 @@
       <End color="Delimiter">}</End>
       <RuleSet>
 
+        <Span color="Comment" multiline="true" begin="{_" end="}"/>
+
         <Rule color="Delimiter">
           [{|:}]
         </Rule>
