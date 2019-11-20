@@ -80,7 +80,12 @@ namespace AvalonCottle
         {
             if (currentFileName == null)
             {
-                SaveFileDialog dlg = new SaveFileDialog {DefaultExt = ".cottle"};
+                SaveFileDialog dlg = new SaveFileDialog
+                {
+                    FileName = "Document",
+                    DefaultExt = ".cottle",
+                    Filter = "Cottle files (*.cottle)|*.cottle|Text files (*.txt)|*.txt",
+                };
                 if (dlg.ShowDialog() ?? false)
                 {
                     currentFileName = dlg.FileName;
@@ -91,6 +96,7 @@ namespace AvalonCottle
                 }
             }
             textEditor.Save(currentFileName);
+            this.Title = Path.GetFileName(currentFileName);
         }
 
         void textEditor_TextArea_TextEntered(object sender, TextCompositionEventArgs e)
