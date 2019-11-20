@@ -17,53 +17,62 @@ namespace AvalonCottle
     /// </summary>
     public partial class MainWindow : Window
     {
-        CompletionWindow completionWindow;
+        private CompletionWindow completionWindow;
         private string currentFilePath;
 
+        #region setup
         public MainWindow()
         {
-            // Load our custom highlighting definition
-            IHighlightingDefinition customHighlighting;
+            RegisterCottleDefinition();
+            InitializeComponent();
+            ConfigfureTextEditor();
+            LoadDefaultText();
+        }
+
+        private void RegisterCottleDefinition()
+        {
+            IHighlightingDefinition cottleHighlightingDef;
             using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("AvalonCottle.Cottle.xshd"))
             {
-                if (s == null)
-                {
-                    throw new InvalidOperationException("Could not find embedded resource");
-                }
-
                 using (XmlReader reader = new XmlTextReader(s))
                 {
-                    customHighlighting = ICSharpCode.AvalonEdit.Highlighting.Xshd.HighlightingLoader.Load(reader, HighlightingManager.Instance);
+                    cottleHighlightingDef = ICSharpCode.AvalonEdit.Highlighting.Xshd.HighlightingLoader.Load(reader, HighlightingManager.Instance);
                 }
             }
 
-            // tweak a color
-            HighlightingColor commentColor = customHighlighting.GetNamedColor("Comment");
-            commentColor.Background = new SimpleHighlightingBrush(Colors.Bisque);
+            // Tweak a HighlightingColor at runtime to prove that we can
+            SetBackgroundColor(cottleHighlightingDef, "Comment", Colors.Bisque);
 
-            // and register it in the HighlightingManager
-            HighlightingManager.Instance.RegisterHighlighting("Cottle", new string[] { ".cottle" }, customHighlighting);
+            // Register our definition against the file extension
+            HighlightingManager.Instance.RegisterHighlighting("Cottle", new string[] { ".cottle" }, cottleHighlightingDef);
+        }
 
-            InitializeComponent();
+        private static void SetBackgroundColor(IHighlightingDefinition definition, string colorName, Color newColor)
+        {
+            HighlightingColor color = definition.GetNamedColor(colorName);
+            color.Background = new SimpleHighlightingBrush(newColor);
+        }
 
-            this.SetValue(TextOptions.TextFormattingModeProperty, TextFormattingMode.Display);
-
+        private void ConfigfureTextEditor()
+        {
+            SetValue(TextOptions.TextFormattingModeProperty, TextFormattingMode.Display);
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
             SearchPanel.Install(textEditor);
+        }
 
+        private void LoadDefaultText()
+        {
             using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("AvalonCottle.Data voucher redeemed.cottle"))
             {
-                if (s != null)
+                if (s == null) {return;}
+                using (StreamReader reader = new StreamReader(s))
                 {
-                    using (StreamReader reader = new StreamReader(s))
-                    {
-                        textEditor.Text = reader.ReadToEnd();
-                    }
+                    textEditor.Text = reader.ReadToEnd();
                 }
-
             }
         }
+        #endregion
 
         #region File handling
         void openFileClick(object sender, RoutedEventArgs e)

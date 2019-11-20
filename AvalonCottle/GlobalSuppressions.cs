@@ -4,3 +4,4 @@
 // a specific target and scoped to a namespace, type, member, etc.
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "Usually invalid", Scope = "member", Target = "~M:AvalonCottle.MainWindow.#ctor")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "Usually invalid", Scope = "member", Target = "~M:AvalonCottle.MainWindow.SetupAvalonEdit")]
