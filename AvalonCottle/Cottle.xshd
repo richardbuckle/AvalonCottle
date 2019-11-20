@@ -26,101 +26,107 @@
     <Span color="Comment" multiline="true" begin="{_" end="}"/>
 
     <!-- code -->
-    <Span color="Code" fontFamily="Consolas" multiline="true">
+    <Span color="Code" fontFamily="Consolas" multiline="true" ruleSet="Code">
       <Begin color="Delimiter">{</Begin>
       <End color="Delimiter">}</End>
-      <RuleSet>
+    </Span>
+  </RuleSet>
 
-        <Span color="Comment" multiline="true" begin="{_" end="}"/>
+  <RuleSet name="Code">
+    <!-- comments -->
+    <Span color="Comment" multiline="true" begin="{_" end="}"/>
 
-        <Rule color="Delimiter">
-          [{|:}]
-        </Rule>
+    <!-- delimiters -->
+    <Rule color="Delimiter">
+      [{|:}]
+    </Rule>
 
-        <!-- String literals are treated as body text and reference this file's main ruleset -->
-        <Span color="Body text" ruleSet="">
-          <Begin color="Delimiter">"</Begin>
-          <End color="Delimiter">"</End>
-        </Span>
-
-        <!-- Same for single-quoted strings -->
-        <Span color="Body text" ruleSet="">
-          <Begin color="Delimiter">'</Begin>
-          <End color="Delimiter">'</End>
-        </Span>
-
-        <!--if|elif|else naive rule TODO improve this -->
-        <Rule>
-          if foo .* elif .* else .*
-        </Rule>
-
-        <Keywords color="Keyword">
-          <Word>if</Word>
-          <Word>elif</Word>
-          <Word>else</Word>
-          <Word>for</Word>
-          <Word>while</Word>
-          <Word>empty:</Word>
-          <Word>in</Word>
-          <Word>set</Word>
-          <Word>to</Word>
-          <!-- etc... -->
-        </Keywords>
-
-        <Keywords color="Operator">
-          <Word>+</Word>
-          <Word>-</Word>
-          <Word>*</Word>
-          <Word>/</Word>
-          <Word>%</Word>
-          <Word>&amp;&amp;</Word>
-          <Word>||</Word>
-          <Word>&lt;</Word>
-          <Word>&gt;</Word>
-        </Keywords>
-
-        <!-- Digits -->
-        <Rule color="Literals">
-          (    \d+(\.[0-9]+)?   #number with optional floating point
-          |    \.[0-9]+         #or just starting with floating point
-          )
-        </Rule>
-
-        <!-- Other literals-->
-        <Keywords color="Literals">
-          <Word>true</Word>
-          <Word>false</Word>
-          <Word>void</Word>
-        </Keywords>
-
-        <Keywords color="Built-in functions">
-          <Word>len</Word>
-          <Word>max</Word>
-          <Word>min</Word>
-          <Word>cat</Word>
-          <!-- etc... -->
-        </Keywords>
-
-        <Keywords color="EDDI functions">
-          <Word>SetState</Word>
-          <Word>Humanise</Word>
-          <Word>Occasionally</Word>
-          <Word>OneOf</Word>
-          <Word>P</Word>
-          <!-- etc... -->
-        </Keywords>
-
-        <Keywords color="EDDI properties">
-          <Word>event</Word>
-          <Word>rewards</Word>
-          <Word>faction</Word>
-          <Word>orbitalperiod</Word>
-          <Word>stellarclass</Word>
-          <!-- etc... -->
-        </Keywords>
-
-      </RuleSet>
+    <!-- String literals are treated as body text and reference this file's main ruleset -->
+    <Span color="Body text" ruleSet="">
+      <Begin color="Delimiter">"</Begin>
+      <End color="Delimiter">"</End>
     </Span>
 
+    <!-- Same for single-quoted strings -->
+    <Span color="Body text" ruleSet="">
+      <Begin color="Delimiter">'</Begin>
+      <End color="Delimiter">'</End>
+    </Span>
+
+    <!--if|elif|else naive rule TODO improve this -->
+    <Rule>
+      if foo .* elif .* else .*
+    </Rule>
+
+    <Keywords color="Keyword">
+      <Word>if</Word>
+      <Word>elif</Word>
+      <Word>else</Word>
+      <Word>for</Word>
+      <Word>while</Word>
+      <Word>empty:</Word>
+      <Word>in</Word>
+      <Word>set</Word>
+      <Word>to</Word>
+      <!-- etc... -->
+    </Keywords>
+
+    <Keywords color="Operator">
+      <Word>(</Word>
+      <Word>)</Word>
+      <Word>[</Word>
+      <Word>]</Word>
+      <Word>,</Word>
+      <Word>+</Word>
+      <Word>-</Word>
+      <Word>*</Word>
+      <Word>/</Word>
+      <Word>%</Word>
+      <Word>&amp;&amp;</Word>
+      <Word>||</Word>
+      <Word>&lt;</Word>
+      <Word>&gt;</Word>
+    </Keywords>
+
+    <!-- Digits -->
+    <Rule color="Literals">
+      (    \d+(\.[0-9]+)?   #number with optional floating point
+      |    \.[0-9]+         #or just starting with floating point
+      )
+    </Rule>
+
+    <!-- Other literals-->
+    <Keywords color="Literals">
+      <Word>true</Word>
+      <Word>false</Word>
+      <Word>void</Word>
+    </Keywords>
+
+    <Keywords color="Built-in functions">
+      <Word>len</Word>
+      <Word>max</Word>
+      <Word>min</Word>
+      <Word>cat</Word>
+      <!-- etc... -->
+    </Keywords>
+
+    <Keywords color="EDDI functions">
+      <Word>SetState</Word>
+      <Word>Humanise</Word>
+      <Word>Occasionally</Word>
+      <Word>OneOf</Word>
+      <Word>P</Word>
+      <!-- etc... -->
+    </Keywords>
+
+    <Keywords color="EDDI properties">
+      <Word>event</Word>
+      <Word>rewards</Word>
+      <Word>faction</Word>
+      <Word>orbitalperiod</Word>
+      <Word>stellarclass</Word>
+      <!-- etc... -->
+    </Keywords>
   </RuleSet>
+
 </SyntaxDefinition>
