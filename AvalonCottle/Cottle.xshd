@@ -3,9 +3,9 @@
   <Color name ="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" foreground="Purple"/>
-  <Color name="Keyword" foreground="Red"/>
+  <Color name="Keyword" foreground="MediumVioletRed"/>
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
-  <Color name="Delimiter" foreground="Firebrick" fontWeight="bold"/>
+  <Color name="Delimiter" foreground="Blue" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
 
   <!-- This is the main ruleset. -->
