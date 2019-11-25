@@ -45,7 +45,7 @@
 
   <!-- Used only within predicate statements such as if and elif -->
   <RuleSet name="Predicate statement">
-    <Span ruleSet="Body text" color="Body text">
+    <Span ruleSet="Body text" color="Body text" multiline="true">
       <Begin color="Delimiter">:</Begin>
       <End color="Delimiter">[|}]</End>
     </Span>
@@ -74,19 +74,19 @@
     </Span>
 
     <!-- if -->
-    <Span ruleSet="Predicate statement">
+    <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">if</Begin>
       <End color="Delimiter">[\|}]</End>
     </Span>
 
     <!-- elif -->
-    <Span ruleSet="Predicate statement">
+    <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">elif</Begin>
       <End color="Delimiter">[\|}]</End>
     </Span>
 
     <!-- else -->
-    <Span ruleSet="Predicate statement">
+    <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">else</Begin>
       <End color="Delimiter">[}]</End>
     </Span>
