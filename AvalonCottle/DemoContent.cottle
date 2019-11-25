@@ -49,3 +49,10 @@ Words like void, true and false have no meaning in body text.
 |empty:
     No messages to display.
 }
+
+{if cur = length: 
+  {}
+  |elif cur < length:
+     {set orbitdescription to cat(orbitdescription, ", ")}
+ }
+ 
