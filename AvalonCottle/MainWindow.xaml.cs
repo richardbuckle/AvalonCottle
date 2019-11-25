@@ -50,7 +50,7 @@ namespace AvalonCottle
         private static void SetBackgroundColor(IHighlightingDefinition definition, string colorName, Color newColor)
         {
             HighlightingColor color = definition.GetNamedColor(colorName);
-            color.Background = new SimpleHighlightingBrush(newColor);
+            //color.Background = new SimpleHighlightingBrush(newColor);
         }
 
         private void ConfigfureTextEditor()
