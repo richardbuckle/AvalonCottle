@@ -65,13 +65,17 @@
       <End color="Quote mark">'</End>
     </Span>
 
-    <!--
-    if|elif|else naive rule 
-    TODO improve this 
-    -->
-    <Rule>
-      if foo .* elif .* else .*
-    </Rule>
+    <!-- if -->
+    <Span>
+      <Begin color="Keyword">if</Begin>
+      <End color="Delimiter">[|}]</End>
+      <RuleSet>
+        <Span ruleSet="Body text" color="Body text">
+          <Begin color="Delimiter">:</Begin>
+          <End color="Delimiter">[|}]</End>
+        </Span>
+      </RuleSet>
+    </Span>
 
     <Keywords color="Keyword">
       <Word>if</Word>
