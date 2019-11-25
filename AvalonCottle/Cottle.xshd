@@ -10,7 +10,7 @@
   <Color name="Code" foreground="Purple"/>
   <Color name="Delimiter" foreground="Purple" fontWeight="bold"/>
   <Color name="Keyword" foreground="MediumVioletRed"/>
-  <Color name="Quote mark" foreground="SlateBlue" background="Bisque"/>
+  <Color name="Quote mark" foreground="SlateBlue"/>
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
   <Color name="Built-in functions" foreground="MediumOrchid"/>
@@ -43,6 +43,14 @@
     <Span begin="\\" end="."/>
   </RuleSet>
 
+  <!-- Used only within predicate statements such as if and elif -->
+  <RuleSet name="Predicate statement">
+    <Span ruleSet="Body text" color="Body text">
+      <Begin color="Delimiter">:</Begin>
+      <End color="Delimiter">[|}]</End>
+    </Span>
+  </RuleSet>
+
   <!-- The code rule set. It can contain code, comments and keywords. Certain keywords can recurse us back to a body text span. -->
   <RuleSet name="Code">
     <!-- comments -->
@@ -66,15 +74,21 @@
     </Span>
 
     <!-- if -->
-    <Span>
+    <Span ruleSet="Predicate statement">
       <Begin color="Keyword">if</Begin>
-      <End color="Delimiter">[|}]</End>
-      <RuleSet>
-        <Span ruleSet="Body text" color="Body text">
-          <Begin color="Delimiter">:</Begin>
-          <End color="Delimiter">[|}]</End>
-        </Span>
-      </RuleSet>
+      <End color="Delimiter">[\|}]</End>
+    </Span>
+
+    <!-- elif -->
+    <Span ruleSet="Predicate statement">
+      <Begin color="Keyword">elif</Begin>
+      <End color="Delimiter">[\|}]</End>
+    </Span>
+
+    <!-- else -->
+    <Span ruleSet="Predicate statement">
+      <Begin color="Keyword">else</Begin>
+      <End color="Delimiter">[}]</End>
     </Span>
 
     <Keywords color="Keyword">
