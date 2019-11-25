@@ -43,11 +43,12 @@
     <Span begin="\\" end="."/>
   </RuleSet>
 
-  <!-- Used only within predicate statements such as if and elif -->
+  <!-- Used only within predicate statements such as if and elif.
+  Everything up to the first colon is code, the remainder is body text -->
   <RuleSet name="Predicate statement">
     <Span ruleSet="Body text" color="Body text" multiline="true">
       <Begin color="Delimiter">:</Begin>
-      <End color="Delimiter">[|}]</End>
+      <End color="Delimiter">(?=[|}])</End>
     </Span>
   </RuleSet>
 
@@ -76,19 +77,19 @@
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">if</Begin>
-      <End color="Delimiter">[\|}]</End>
+      <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- elif -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">elif</Begin>
-      <End color="Delimiter">[\|}]</End>
+      <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- else -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">else</Begin>
-      <End color="Delimiter">[}]</End>
+      <End color="Delimiter">(?=})</End>
     </Span>
 
     <Keywords color="Keyword">
