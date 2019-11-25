@@ -39,5 +39,13 @@ Literals like 2.3 and keywords like else are not colored in body text.
 {dump("Double-quoted string with \"escape\" codes can use 'single' quotes.")}
 {dump('Single-quoted string with \'escape\' codes can use "double" quotes.')}
 {"" is void }
-{if 1 is true or "a" is void: "yay" |else: false}
+{if 1 is true or "a" is void: yay |else: false}
 Words like void, true and false have no meaning in body text.
+
+{if x < 3 : less than three |elif x > 4 : greater than four | else: shrug }
+
+{for index, text in messages:
+    Message #{index + 1}: {text}
+|empty:
+    No messages to display.
+}
