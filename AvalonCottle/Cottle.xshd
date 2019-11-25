@@ -5,7 +5,7 @@
   <https://www.codeproject.com/Articles/42490/Using-AvalonEdit-WPF-Text-Editor?msg=4879049#xx4879049xx> 
   -->
   
-  <Color name ="Body text" foreground="DarkSlateGray"/>
+  <Color name="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" foreground="Purple"/>
   <Color name="Keyword" foreground="MediumVioletRed"/>
