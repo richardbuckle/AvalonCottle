@@ -8,9 +8,10 @@
   <Color name="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" foreground="Purple"/>
+  <Color name="Delimiter" foreground="MediumVioletRed" fontWeight="bold"/>
   <Color name="Keyword" foreground="MediumVioletRed"/>
+  <Color name="Quote mark" foreground="SlateBlue" background="Bisque"/>
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
-  <Color name="Delimiter" foreground="Blue" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
   <Color name="Built-in functions" foreground="MediumOrchid"/>
   <Color name="Custom functions" foreground="DodgerBlue"/>
@@ -45,14 +46,14 @@
 
     <!-- String literals are treated as body text and reference this file's main ruleset -->
     <Span color="Body text" ruleSet="">
-      <Begin color="Delimiter">"</Begin>
-      <End color="Delimiter">"</End>
+      <Begin color="Quote mark">"</Begin>
+      <End color="Quote mark">"</End>
     </Span>
 
     <!-- Same for single-quoted strings -->
     <Span color="Body text" ruleSet="">
-      <Begin color="Delimiter">'</Begin>
-      <End color="Delimiter">'</End>
+      <Begin color="Quote mark">'</Begin>
+      <End color="Quote mark">'</End>
     </Span>
 
     <!--
