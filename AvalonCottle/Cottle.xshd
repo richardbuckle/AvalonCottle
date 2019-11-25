@@ -8,7 +8,7 @@
   <Color name="Body text" foreground="DarkSlateGray"/>
   <Color name="Comment" foreground="Green" fontStyle="italic"/>
   <Color name="Code" foreground="Purple"/>
-  <Color name="Delimiter" foreground="MediumVioletRed" fontWeight="bold"/>
+  <Color name="Delimiter" foreground="Purple" fontWeight="bold"/>
   <Color name="Keyword" foreground="MediumVioletRed"/>
   <Color name="Quote mark" foreground="SlateBlue" background="Bisque"/>
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
@@ -17,15 +17,18 @@
   <Color name="Custom functions" foreground="DodgerBlue"/>
   <Color name="Custom properties" foreground="LightSeaGreen"/>
 
-  <!-- 
-    This is the main rule set: it describes body text and is referenced recursively. 
-    Only code (including comments) can drop us down from this level.-->
+  <!-- The main rule set simply references the "Body text" rule set, which is written separately for clarity. -->
   <RuleSet>
+    <Import ruleSet="Body text"/>
+  </RuleSet>
+
+  <!-- The Body text rule set: it is referenced recursively and can contain only code and comment spans.-->
+  <RuleSet name="Body text">
     <!-- escape sequences -->
     <Span begin="\\" end="."/>
 
     <!-- comments -->
-    <Span color="Comment" multiline="true" begin="{_" end="}"/>
+    <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
 
     <!-- code -->
     <Span color="Code" fontFamily="Consolas" multiline="true" ruleSet="Code">
@@ -34,24 +37,30 @@
     </Span>
   </RuleSet>
 
-  <!-- This is the code rule set. It can contain code, comments and keywords. -->
+  <!-- The comment rule set simply caters for escape sequences. -->
+  <RuleSet name="Comment">
+    <!-- escape sequences -->
+    <Span begin="\\" end="."/>
+  </RuleSet>
+
+  <!-- The code rule set. It can contain code, comments and keywords. Certain keywords can recurse us back to a body text span. -->
   <RuleSet name="Code">
     <!-- comments -->
-    <Span color="Comment" multiline="true" begin="{_" end="}"/>
+    <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
 
     <!-- delimiters -->
     <Rule color="Delimiter">
       [{|:}]
     </Rule>
 
-    <!-- String literals are treated as body text and reference this file's main ruleset -->
-    <Span color="Body text" ruleSet="">
+    <!-- String literals are treated as body text -->
+    <Span color="Body text" ruleSet="Body text">
       <Begin color="Quote mark">"</Begin>
       <End color="Quote mark">"</End>
     </Span>
 
     <!-- Same for single-quoted strings -->
-    <Span color="Body text" ruleSet="">
+    <Span color="Body text" ruleSet="Body text">
       <Begin color="Quote mark">'</Begin>
       <End color="Quote mark">'</End>
     </Span>
