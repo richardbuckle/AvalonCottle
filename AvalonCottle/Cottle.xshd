@@ -100,8 +100,8 @@
 
     <!-- Digits -->
     <Rule color="Literals">
-      (    \d+(\.[0-9]+)?   #number with optional floating point
-      |    \.[0-9]+         #or just starting with floating point
+      (    \d+(\.\d+)?   #number with optional floating point
+      |    \.\d+         #or just starting with floating point
       )
     </Rule>
 
