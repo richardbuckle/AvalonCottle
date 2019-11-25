@@ -13,8 +13,8 @@
   <Color name="Delimiter" foreground="Blue" fontWeight="bold"/>
   <Color name="Literals" foreground="Firebrick"/>
   <Color name="Built-in functions" foreground="MediumOrchid"/>
-  <Color name="EDDI functions" foreground="DodgerBlue"/>
-  <Color name="EDDI properties" foreground="LightSeaGreen"/>
+  <Color name="Custom functions" foreground="DodgerBlue"/>
+  <Color name="Custom properties" foreground="LightSeaGreen"/>
 
   <!-- 
     This is the main rule set: it describes body text and is referenced recursively. 
@@ -121,7 +121,7 @@
       <!-- etc... -->
     </Keywords>
 
-    <Keywords color="EDDI functions">
+    <Keywords color="Custom functions">
       <Word>SetState</Word>
       <Word>Humanise</Word>
       <Word>Occasionally</Word>
@@ -130,7 +130,7 @@
       <!-- etc... -->
     </Keywords>
 
-    <Keywords color="EDDI properties">
+    <Keywords color="Custom properties">
       <Word>event</Word>
       <Word>rewards</Word>
       <Word>faction</Word>
