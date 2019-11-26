@@ -3,7 +3,7 @@
 {_ Context }
 {SetState('eddi_context_last_subject', 'data_voucher')}
 
-Keywords like void, true and false have no meaning in body text.
+Keywords like void, if and else have no meaning in body text.
 Literals like 2.3 and keywords like else are not colored in body text.
 
 {_ A comment can backslash-escape \|, \{, \} and \\ }
@@ -13,11 +13,12 @@ Literals like 2.3 and keywords like else are not colored in body text.
 
 {set ultimateAnswer to 42}
 {set approximateAnswer to 42.0001}
-
 {set x to true}
-{if 1 is true or "a" is void: yay |else: false}
+{sey y to false}
+{if 1 is true or "a" is void: yay |else: nay}
 
-{if x < 3 : less than three |elif x > 4 : greater than four | else: shrug }
+{_ test a compound if}
+{if x < 3 : less than three |elif x > 4 : greater than four |else: shrug }
 
 {_ test for loops}
 {for index, text in messages:
@@ -26,14 +27,10 @@ Literals like 2.3 and keywords like else are not colored in body text.
     Result: {when(false, "no message", "error {error.text}")}
 }
 
-{if cur = length: 
-  {}
-  |elif cur < length:
-     {set orbitdescription to cat(orbitdescription, ", ")}
- }
- 
+{_ test Custom function name}
 {if singular: voucher |else: vouchers} for {Humanise(event.amount)} credits
 
+{_ test coloring of nested if statements}
 {Occasionally(2, "{if singular: has |else: have} {Occasionally(2, 'now')} been"))}
 {OneOf("redeemed", "claimed")}
 {Occasionally(2, "
