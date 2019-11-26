@@ -57,6 +57,9 @@
 
   <!-- The code rule set. It can contain code, comments and keywords. Certain keywords can recurse us back to a body text span. -->
   <RuleSet name="Code">
+    <!-- escape sequences -->
+    <Span begin="\\" end="."/>
+
     <!-- comments -->
     <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
 
