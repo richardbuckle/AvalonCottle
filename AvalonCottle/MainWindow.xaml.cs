@@ -25,7 +25,7 @@ namespace AvalonCottle
         {
             RegisterCottleDefinition();
             InitializeComponent();
-            ConfigfureTextEditor();
+            ConfigureTextEditor();
             LoadDefaultText();
         }
 
@@ -53,7 +53,7 @@ namespace AvalonCottle
             //color.Background = new SimpleHighlightingBrush(newColor);
         }
 
-        private void ConfigfureTextEditor()
+        private void ConfigureTextEditor()
         {
             SetValue(TextOptions.TextFormattingModeProperty, TextFormattingMode.Display);
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
