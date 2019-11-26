@@ -48,6 +48,7 @@
   <!-- Used only within predicate statements such as if and elif.
   Everything after the first colon is recursive body text -->
   <RuleSet name="Predicate statement">
+    <Import ruleSet="Code"/>
     <Span ruleSet="Body text" color="Body text" multiline="true">
       <Begin color="Delimiter">:</Begin>
       <End color="Delimiter">(?=[|}])</End>
