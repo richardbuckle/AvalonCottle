@@ -12,7 +12,7 @@
   <Color name="Keyword" foreground="MediumVioletRed"/>
   <Color name="Quote mark" foreground="SlateBlue"/>
   <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
-  <Color name="Literals" foreground="Firebrick"/>
+  <Color name="Literals" foreground="Blue"/>
   <Color name="Built-in functions" foreground="MediumOrchid"/>
   <Color name="Custom functions" foreground="DodgerBlue"/>
   <Color name="Custom properties" foreground="LightSeaGreen"/>
