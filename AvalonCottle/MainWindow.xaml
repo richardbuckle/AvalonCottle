@@ -51,9 +51,6 @@
             <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
                 <TextBlock Width="16" TextAlignment="Center">#</TextBlock>
             </CheckBox>
-            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=Options.ShowEndOfLine}">
-                <TextBlock Width="16" TextAlignment="Center">¶</TextBlock>
-            </CheckBox>
         </ToolBar>
         <avalonEdit:TextEditor
             Name="textEditor"
@@ -62,6 +59,8 @@
             Foreground="DarkSlateGray"
             Background="WhiteSmoke"
             HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"
+            WordWrap="True"
+            ShowLineNumbers="True"
             SyntaxHighlighting="Cottle"
         >
             Welcome to AvalonEdit! Use Ctrl+F to search and dot to demo text completion.
