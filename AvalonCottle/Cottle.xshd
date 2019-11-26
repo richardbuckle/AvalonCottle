@@ -92,6 +92,18 @@
       <End color="Delimiter">(?=})</End>
     </Span>
 
+    <!-- for -->
+    <Span ruleSet="Predicate statement" multiline="true">
+      <Begin color="Keyword">for</Begin>
+      <End color="Delimiter">(?=[|}])</End>
+    </Span>
+
+    <!-- empty -->
+    <Span ruleSet="Predicate statement" multiline="true">
+      <Begin color="Keyword">empty</Begin>
+      <End color="Delimiter">(?=})</End>
+    </Span>
+
     <Keywords color="Keyword">
       <Word>if</Word>
       <Word>elif</Word>
