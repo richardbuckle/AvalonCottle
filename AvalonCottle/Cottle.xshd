@@ -19,7 +19,7 @@
   <Color name="Custom functions" foreground="DodgerBlue"/>
   <Color name="Custom properties" foreground="LightSeaGreen"/>
 
-  <!-- The main rule set simply references the "Body text" rule set, which is written separately for clarity. -->
+  <!-- The main rule set: it states that Cottle docs always begin as body text. -->
   <RuleSet>
     <Import ruleSet="Body text"/>
   </RuleSet>
@@ -46,7 +46,7 @@
   </RuleSet>
 
   <!-- Used only within predicate statements such as if and elif.
-  Everything up to the first colon is code, the remainder is body text -->
+  Everything after the first colon is recursive body text -->
   <RuleSet name="Predicate statement">
     <Span ruleSet="Body text" color="Body text" multiline="true">
       <Begin color="Delimiter">:</Begin>
