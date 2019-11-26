@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0"?>
 <SyntaxDefinition name="Cottle" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-  <!-- Documentation: 
+  <!-- A definition for the Cottle text template engine documented at <https://r3c.github.io/cottle/>-->
+
+  <!-- AvalonEdit documentation: 
   <http://avalonedit.net/documentation/> 
   <https://www.codeproject.com/Articles/42490/Using-AvalonEdit-WPF-Text-Editor?msg=4879049#xx4879049xx> 
   -->
