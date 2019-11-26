@@ -25,14 +25,6 @@
     <Import ruleSet="Body text"/>
   </RuleSet>
 
-  <!-- Backslash escape sequences are common enough to merit a rule set -->
-  <RuleSet name="Escape sequences">
-    <Span>
-      <Begin color="EscapeDelimiter">\\</Begin>
-      <End>.</End>
-    </Span>
-  </RuleSet>
-
   <!-- The Body text rule set: it is referenced recursively and can contain only code and comment spans.-->
   <RuleSet name="Body text">
     <Import ruleSet="Escape sequences"/>
@@ -53,7 +45,7 @@
   </RuleSet>
 
   <!-- The Predicate statement rule set is used in statements such as `if` and `elif`.
-  If says that we start with code (the predicate) until the first unescaped colon, and everything after that is recursive body text. -->
+  It says that we start with code (the predicate) until the first unescaped colon, and everything after that is recursive body text. -->
   <RuleSet name="Predicate statement">
     <Import ruleSet="Code"/>
     <Span ruleSet="Body text" color="Body text" multiline="true">
@@ -62,9 +54,13 @@
     </Span>
   </RuleSet>
 
-  <!-- The Code rule set. It can contain code, comments and keywords. Certain keywords can recurse us back to a body text span. -->
+    <!-- The Code rule set. It can contain code, literals, comments and keywords. Certain keywords can recurse us back to a body text span. -->
   <RuleSet name="Code">
     <Import ruleSet="Escape sequences"/>
+    <Import ruleSet="Literals"/>
+    <Import ruleSet="Built-in functions"/>
+    <Import ruleSet="Custom functions"/>
+    <Import ruleSet="Custom properties"/>
 
     <!-- comments -->
     <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
@@ -116,6 +112,33 @@
       <End color="Delimiter">(?=})</End>
     </Span>
 
+  </RuleSet>
+
+  <!-- Backslash escape sequences are common enough to merit a rule set -->
+  <RuleSet name="Escape sequences">
+    <Span>
+      <Begin color="EscapeDelimiter">\\</Begin>
+      <End>.</End>
+    </Span>
+  </RuleSet>
+
+  <RuleSet name="Literals">
+    <!-- Digits -->
+    <Rule color="Literals">
+      (    \d+(\.\d+)?   # number with optional floating point
+      |    \.\d+         # or just starting with floating point
+      )
+    </Rule>
+
+    <!-- Other literals-->
+    <Keywords color="Literals">
+      <Word>true</Word>
+      <Word>false</Word>
+      <Word>void</Word>
+    </Keywords>
+  </RuleSet>
+
+  <RuleSet name="Built-in keywords">
     <Keywords color="Keyword">
       <Word>if</Word>
       <Word>elif</Word>
@@ -129,7 +152,20 @@
       <Word>is</Word>
       <!-- etc... -->
     </Keywords>
+  </RuleSet>
 
+  <RuleSet name="Built-in functions">
+    <Keywords color="Built-in functions">
+      <Word>len</Word>
+      <Word>max</Word>
+      <Word>min</Word>
+      <Word>cat</Word>
+      <Word>dump</Word>
+      <!-- etc... -->
+    </Keywords>
+  </RuleSet>
+
+  <RuleSet name="Built-in operators">
     <Keywords color="Operator">
       <Word>(</Word>
       <Word>)</Word>
@@ -151,30 +187,9 @@
       <Word>&gt;=</Word>
       <Word>&gt;</Word>
     </Keywords>
+  </RuleSet>
 
-    <!-- Digits -->
-    <Rule color="Literals">
-      (    \d+(\.\d+)?   # number with optional floating point
-      |    \.\d+         # or just starting with floating point
-      )
-    </Rule>
-
-    <!-- Other literals-->
-    <Keywords color="Literals">
-      <Word>true</Word>
-      <Word>false</Word>
-      <Word>void</Word>
-    </Keywords>
-
-    <Keywords color="Built-in functions">
-      <Word>len</Word>
-      <Word>max</Word>
-      <Word>min</Word>
-      <Word>cat</Word>
-      <Word>dump</Word>
-      <!-- etc... -->
-    </Keywords>
-
+  <RuleSet name="Custom functions">
     <Keywords color="Custom functions">
       <Word>SetState</Word>
       <Word>Humanise</Word>
@@ -183,7 +198,9 @@
       <Word>P</Word>
       <!-- etc... -->
     </Keywords>
+  </RuleSet>
 
+  <RuleSet name="Custom properties">
     <Keywords color="Custom properties">
       <Word>event</Word>
       <Word>rewards</Word>
