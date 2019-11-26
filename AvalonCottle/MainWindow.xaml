@@ -69,16 +69,16 @@
                 </Button.ToolTip>
             </Button>
             <Separator/>
-            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=WordWrap}">
-                <Image Source="Images/WordWrap.png" Height="16"/>
-                <CheckBox.ToolTip>
-                    <ToolTip Content="Word Wrap"/>
-                </CheckBox.ToolTip>
-            </CheckBox>
             <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
                 <TextBlock Width="16" TextAlignment="Center">#</TextBlock>
                 <CheckBox.ToolTip>
                     <ToolTip Content="Show Line Numbers"/>
+                </CheckBox.ToolTip>
+            </CheckBox>
+            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=WordWrap}">
+                <Image Source="Images/WordWrap.png" Height="16"/>
+                <CheckBox.ToolTip>
+                    <ToolTip Content="Word Wrap"/>
                 </CheckBox.ToolTip>
             </CheckBox>
         </ToolBar>
