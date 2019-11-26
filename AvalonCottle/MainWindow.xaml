@@ -20,36 +20,66 @@
             </ToolBar.Resources>
             <Button Click="openFileClick">
                 <Image Source="Images/Open.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Open"/>
+                </Button.ToolTip>
             </Button>
             <Button Click="saveFileClick">
                 <Image Source="Images/Save.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Save"/>
+                </Button.ToolTip>
             </Button>
             <Separator/>
             <Button Command="Cut">
                 <Image Source="Images/Cut.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Cut (Ctrl+X)"/>
+                </Button.ToolTip>
             </Button>
             <Button Command="Copy">
                 <Image Source="Images/Copy.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Copy (Ctrl+C)"/>
+                </Button.ToolTip>
             </Button>
             <Button Command="Paste">
                 <Image Source="Images/Paste.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Paste (Ctrl+V)"/>
+                </Button.ToolTip>
             </Button>
             <Button Command="Delete">
                 <Image Source="Images/Delete.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Delete"/>
+                </Button.ToolTip>
             </Button>
             <Separator/>
             <Button Command="Undo">
                 <Image Source="Images/Undo.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Undo (Ctrl+Z)"/>
+                </Button.ToolTip>
             </Button>
             <Button Command="Redo">
                 <Image Source="Images/Redo.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Redo (Ctrl+Y)"/>
+                </Button.ToolTip>
             </Button>
             <Separator/>
             <CheckBox IsChecked="{Binding ElementName=textEditor,Path=WordWrap}">
                 <Image Source="Images/WordWrap.png" Height="16"/>
+                <CheckBox.ToolTip>
+                    <ToolTip Content="Word Wrap"/>
+                </CheckBox.ToolTip>
             </CheckBox>
             <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
                 <TextBlock Width="16" TextAlignment="Center">#</TextBlock>
+                <CheckBox.ToolTip>
+                    <ToolTip Content="Show Line Numbers"/>
+                </CheckBox.ToolTip>
             </CheckBox>
         </ToolBar>
         <avalonEdit:TextEditor
