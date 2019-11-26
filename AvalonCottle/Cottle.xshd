@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0"?>
 <SyntaxDefinition name="Cottle" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-  <!-- A definition for the Cottle text template engine documented at <https://r3c.github.io/cottle/>-->
+  <!-- A definition for the Cottle text template engine documented at <https://r3c.github.io/cottle/> and available at <https://www.nuget.org/packages/Cottle/> -->
 
   <!-- AvalonEdit documentation: 
   <http://avalonedit.net/documentation/> 
@@ -39,14 +39,14 @@
     </Span>
   </RuleSet>
 
-  <!-- The comment rule set simply caters for escape sequences. -->
+  <!-- The Comment rule set simply caters for escape sequences. -->
   <RuleSet name="Comment">
     <!-- escape sequences -->
     <Span begin="\\" end="."/>
   </RuleSet>
 
-  <!-- Used only within predicate statements such as if and elif.
-  Everything after the first colon is recursive body text -->
+  <!-- Used within predicate statements such as if and elif.
+  If says that we start with code until the first colon, and everything that is recursive body text. -->
   <RuleSet name="Predicate statement">
     <Import ruleSet="Code"/>
     <Span ruleSet="Body text" color="Body text" multiline="true">
@@ -55,7 +55,7 @@
     </Span>
   </RuleSet>
 
-  <!-- The code rule set. It can contain code, comments and keywords. Certain keywords can recurse us back to a body text span. -->
+  <!-- The Code rule set. It can contain code, comments and keywords. Certain keywords can recurse us back to a body text span. -->
   <RuleSet name="Code">
     <!-- escape sequences -->
     <Span begin="\\" end="."/>
@@ -148,8 +148,8 @@
 
     <!-- Digits -->
     <Rule color="Literals">
-      (    \d+(\.\d+)?   #number with optional floating point
-      |    \.\d+         #or just starting with floating point
+      (    \d+(\.\d+)?   # number with optional floating point
+      |    \.\d+         # or just starting with floating point
       )
     </Rule>
 
