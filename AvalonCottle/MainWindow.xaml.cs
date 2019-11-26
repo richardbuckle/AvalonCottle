@@ -41,7 +41,7 @@ namespace AvalonCottle
             }
 
             // Tweak a HighlightingColor at runtime to prove that we can
-            SetBackgroundColor(cottleHighlightingDef, "Comment", Colors.Bisque);
+            SetBackgroundColor(cottleHighlightingDef, "Comment", Colors.WhiteSmoke);
 
             // Register our definition against the file extension
             HighlightingManager.Instance.RegisterHighlighting("Cottle", new string[] { ".cottle" }, cottleHighlightingDef);
@@ -50,7 +50,7 @@ namespace AvalonCottle
         private static void SetBackgroundColor(IHighlightingDefinition definition, string colorName, Color newColor)
         {
             HighlightingColor color = definition.GetNamedColor(colorName);
-            //color.Background = new SimpleHighlightingBrush(newColor);
+            color.Background = new SimpleHighlightingBrush(newColor);
         }
 
         private void ConfigureTextEditor()
