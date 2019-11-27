@@ -150,18 +150,68 @@
       <Word>set</Word>
       <Word>to</Word>
       <Word>is</Word>
-      <!-- etc... -->
+      <Word>echo</Word>
+      <Word>dump</Word>
     </Keywords>
   </RuleSet>
 
   <RuleSet name="Built-in functions">
     <Keywords color="Built-in functions">
+      <Word>abs</Word>
+      <Word>add</Word>
+      <Word>and</Word>
+      <Word>call</Word>
+      <Word>cast</Word>
+      <Word>cat</Word>
+      <Word>ceil</Word>
+      <Word>char</Word>
+      <Word>cmp</Word>
+      <Word>cos</Word>
+      <Word>cross</Word>
+      <Word>default</Word>
+      <Word>defined</Word>
+      <Word>div</Word>
+      <Word>eq</Word>
+      <Word>except</Word>
+      <Word>filter</Word>
+      <Word>find</Word>
+      <Word>flip</Word>
+      <Word>floor</Word>
+      <Word>format</Word>
+      <Word>ge</Word>
+      <Word>gt</Word>
+      <Word>has</Word>
+      <Word>join</Word>
+      <Word>lcase</Word>
+      <Word>le</Word>
       <Word>len</Word>
+      <Word>lt</Word>
+      <Word>map</Word>
+      <Word>match</Word>
       <Word>max</Word>
       <Word>min</Word>
-      <Word>cat</Word>
-      <Word>dump</Word>
-      <!-- etc... -->
+      <Word>mod</Word>
+      <Word>mul</Word>
+      <Word>ne</Word>
+      <Word>not</Word>
+      <Word>or</Word>
+      <Word>ord</Word>
+      <Word>pow</Word>
+      <Word>rand</Word>
+      <Word>range</Word>
+      <Word>round</Word>
+      <Word>sin</Word>
+      <Word>slice</Word>
+      <Word>sort</Word>
+      <Word>split</Word>
+      <Word>sub</Word>
+      <Word>token</Word>
+      <Word>type</Word>
+      <Word>ucase</Word>
+      <Word>union</Word>
+      <Word>when</Word>
+      <Word>xor</Word>
+      <Word>zip</Word>
     </Keywords>
   </RuleSet>
 
@@ -196,6 +246,7 @@
       <Word>Occasionally</Word>
       <Word>OneOf</Word>
       <Word>P</Word>
+      <Word>F</Word>
       <!-- etc... -->
     </Keywords>
   </RuleSet>
