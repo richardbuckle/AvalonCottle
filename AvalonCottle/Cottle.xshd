@@ -86,7 +86,7 @@
 
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">if</Begin>
+      <Begin color="Keyword">\bif\b</Begin>
       <End color="Delimiter">
         (
         (?!\|\|) # do not end on a double pipe (logical or)
@@ -97,31 +97,31 @@
 
     <!-- elif -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">elif</Begin>
+      <Begin color="Keyword">\belif\b</Begin>
       <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- else -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">else</Begin>
+      <Begin color="Keyword">\belse\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
 
     <!-- for -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">for</Begin>
+      <Begin color="Keyword">\bfor\b</Begin>
       <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- empty -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">empty</Begin>
+      <Begin color="Keyword">\bempty\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
 
     <!-- while -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">while</Begin>
+      <Begin color="Keyword">\bwhile\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
   </RuleSet>

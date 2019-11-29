@@ -14,7 +14,6 @@ Literals like 2.3 and keywords like else are not colored in body text.
 {set ultimateAnswer to 42}
 {set approximateAnswer to 42.0001}
 {set x to true}
-{sey y to false}
 {if 1 is true or "a" is void: yay |else: nay}
 
 {_ test a compound if}
@@ -36,12 +35,9 @@ Literals like 2.3 and keywords like else are not colored in body text.
 
 {_ test coloring of nested if statements}
 {if len(event.rewards) = 1 && len(event.rewards[0].faction) > 0:
-  {OneOf("by", "courtesy of")}
   {P(event.rewards[0].faction)}
 |else:
   {if len(event.rewards[0].faction) > 0:
-     {OneOf("by", "courtesy of")}
-     {set cur to 0}
      {while cur < len(event.rewards):
         {if cur = 0:
         |elif cur < len(event.rewards) - 1:
@@ -49,14 +45,18 @@ Literals like 2.3 and keywords like else are not colored in body text.
         |else:
             and
         }
-        {P(event.rewards[cur].faction)}
-        {set cur to cur + 1}
      }
   }
 }
 
-{_ issue 9: greedy matching of delimiters}
+{_ issue #9: greedy matching of delimiters}
 {if recommendOtherMapping || false: 
     {Pause(1500)}
     {F("Bodies to map")}
 }
+
+{_ issue #10: incorrectly highlighing keywords within words }
+{set zforz to void}
+{set zinz to void}
+{set zwhilez to void}
+{set zifz to void}
