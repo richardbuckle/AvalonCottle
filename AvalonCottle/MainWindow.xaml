@@ -53,7 +53,13 @@
             <Button Command="Delete">
                 <Image Source="Images/Delete.png" Height="16"/>
                 <Button.ToolTip>
-                    <ToolTip Content="Delete"/>
+                    <ToolTip Content="Delete (Del)"/>
+                </Button.ToolTip>
+            </Button>
+            <Button Command="avalonEdit:AvalonEditCommands.DeleteLine">
+                <Image Source="Images/Delete line.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Delete Line (Ctrl+D)"/>
                 </Button.ToolTip>
             </Button>
             <Separator/>
