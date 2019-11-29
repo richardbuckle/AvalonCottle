@@ -98,18 +98,18 @@
     <!-- elif -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">\b(elif)\b</Begin>
-      <End color="Delimiter">(?=[|}])</End>
-    </Span>
-
-    <!-- else -->
-    <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(else)\b</Begin>
       <End color="Delimiter">
         (
         (?!\|\|) # do not end on a double pipe (logical or)
         ?=[|}] # end if we lookahead to a single pipe or close brace
         )
       </End>
+    </Span>
+
+    <!-- else -->
+    <Span ruleSet="Predicate statement" multiline="true">
+      <Begin color="Keyword">\b(else)\b</Begin>
+      <End color="Delimiter">(?=})</End>
     </Span>
 
     <!-- for -->
@@ -191,14 +191,14 @@
       <Word>*</Word>
       <Word>/</Word>
       <Word>%</Word>
-      <Word>&amp;&amp;</Word>
-      <Word>||</Word>
       <Word>&lt;</Word>
       <Word>&lt;=</Word>
       <Word>=</Word>
       <Word>!=</Word>
       <Word>&gt;=</Word>
       <Word>&gt;</Word>
+      <Word>&amp;&amp;</Word>
+      <Word>||</Word>
     </Keywords>
   </RuleSet>
 
