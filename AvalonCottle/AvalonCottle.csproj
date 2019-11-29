@@ -12,6 +12,7 @@
     <None Remove="Images\Copy.png" />
     <None Remove="Images\Cut.png" />
     <None Remove="Images\Delete.png" />
+    <None Remove="Images\Find.png" />
     <None Remove="Images\Open.png" />
     <None Remove="Images\Paste.png" />
     <None Remove="Images\Redo.png" />
@@ -33,6 +34,7 @@
     <Resource Include="Images\Copy.png" />
     <Resource Include="Images\Cut.png" />
     <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\Find.png" />
     <Resource Include="Images\Open.png" />
     <Resource Include="Images\Paste.png" />
     <Resource Include="Images\Redo.png" />

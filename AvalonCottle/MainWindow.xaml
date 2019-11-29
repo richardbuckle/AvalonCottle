@@ -70,6 +70,13 @@
                 </Button.ToolTip>
             </Button>
             <Separator/>
+            <Button Command="Find">
+                <Image Source="Images/Find.png" Height="16"/>
+                <Button.ToolTip>
+                    <ToolTip Content="Find (Ctrl+F)"/>
+                </Button.ToolTip>
+            </Button>
+            <Separator/>
             <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
                 <TextBlock Width="16" TextAlignment="Center">#</TextBlock>
                 <CheckBox.ToolTip>
