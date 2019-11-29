@@ -11,6 +11,7 @@
     <None Remove="DemoContent.cottle" />
     <None Remove="Images\Copy.png" />
     <None Remove="Images\Cut.png" />
+    <None Remove="Images\Delete line.png" />
     <None Remove="Images\Delete.png" />
     <None Remove="Images\Find.png" />
     <None Remove="Images\Open.png" />
@@ -33,6 +34,7 @@
   <ItemGroup>
     <Resource Include="Images\Copy.png" />
     <Resource Include="Images\Cut.png" />
+    <Resource Include="Images\Delete line.png" />
     <Resource Include="Images\Delete.png" />
     <Resource Include="Images\Find.png" />
     <Resource Include="Images\Open.png" />
