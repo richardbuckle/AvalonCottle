@@ -113,6 +113,12 @@
       <Begin color="Keyword">empty</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
+
+    <!-- while -->
+    <Span ruleSet="Predicate statement" multiline="true">
+      <Begin color="Keyword">while</Begin>
+      <End color="Delimiter">(?=})</End>
+    </Span>
   </RuleSet>
 
   <!-- Backslash escape sequences are common enough to merit a rule set -->
@@ -130,6 +136,8 @@
       |    \.\d+         # or just starting with floating point
       )
     </Rule>
+
+    <!-- String literals are treated as body text -->
 
     <!-- Other literals-->
     <Keywords color="Literals">
