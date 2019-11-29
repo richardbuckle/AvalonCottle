@@ -86,7 +86,7 @@
 
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\bif\b</Begin>
+      <Begin color="Keyword">\b(if)\b</Begin>
       <End color="Delimiter">
         (
         (?!\|\|) # do not end on a double pipe (logical or)
@@ -97,31 +97,36 @@
 
     <!-- elif -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\belif\b</Begin>
+      <Begin color="Keyword">\b(elif)\b</Begin>
       <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- else -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\belse\b</Begin>
-      <End color="Delimiter">(?=})</End>
+      <Begin color="Keyword">\b(else)\b</Begin>
+      <End color="Delimiter">
+        (
+        (?!\|\|) # do not end on a double pipe (logical or)
+        ?=[|}] # end if we lookahead to a single pipe or close brace
+        )
+      </End>
     </Span>
 
     <!-- for -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\bfor\b</Begin>
+      <Begin color="Keyword">\b(for)\b</Begin>
       <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- empty -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\bempty\b</Begin>
+      <Begin color="Keyword">\b(empty)\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
 
     <!-- while -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\bwhile\b</Begin>
+      <Begin color="Keyword">\b(while)\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
   </RuleSet>
