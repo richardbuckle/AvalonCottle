@@ -89,7 +89,7 @@
       <Begin color="Keyword">if</Begin>
       <End color="Delimiter">
         (
-        (?!\|\|) ## do not end on a double pipe (logical or)
+        (?!\|\|) # do not end on a double pipe (logical or)
         ?=[|}] # end if we lookahead to a single pipe or close brace
         )
       </End>
