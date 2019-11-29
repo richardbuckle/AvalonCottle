@@ -6,7 +6,8 @@
         xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         xmlns:local="clr-namespace:AvalonCottle"
         mc:Ignorable="d"
-        Title="untitled" Height="800" Width="800" WindowStyle="ThreeDBorderWindow" ResizeMode="CanResizeWithGrip">
+        Title="untitled" Height="800" Width="800" WindowStyle="ThreeDBorderWindow" ResizeMode="CanResizeWithGrip"
+        FocusManager.FocusedElement="{Binding ElementName=textEditor}">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
             <ToolBar.Resources>
