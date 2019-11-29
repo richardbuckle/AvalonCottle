@@ -13,10 +13,10 @@
   <Color name="Delimiter" foreground="Purple" fontWeight="bold"/>
   <Color name="EscapeDelimiter" foreground="Orchid"/>
   <Color name="Keyword" foreground="MediumVioletRed"/>
-  <Color name="Quote mark" foreground="SlateBlue"/>
-  <Color name="Operator" foreground="SlateBlue" fontWeight="bold"/>
+  <Color name="Quote mark" foreground="Blue"/>
+  <Color name="Operator" foreground="Blue"/>
   <Color name="Literals" foreground="Blue"/>
-  <Color name="Built-in functions" foreground="MediumOrchid"/>
+  <Color name="Built-in functions" foreground="MediumOrchid" fontWeight="bold"/>
   <Color name="Custom functions" foreground="DodgerBlue"/>
   <Color name="Custom properties" foreground="LightSeaGreen"/>
 
