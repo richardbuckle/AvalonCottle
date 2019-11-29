@@ -54,3 +54,9 @@ Literals like 2.3 and keywords like else are not colored in body text.
      }
   }
 }
+
+{_ issue 9: greedy matching of delimiters}
+{if recommendOtherMapping || false: 
+    {Pause(1500)}
+    {F("Bodies to map")}
+}

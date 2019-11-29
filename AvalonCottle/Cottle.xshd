@@ -87,7 +87,12 @@
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">if</Begin>
-      <End color="Delimiter">(?=[|}])</End>
+      <End color="Delimiter">
+        (
+        (?!\|\|) ## do not end on a double pipe (logical or)
+        ?=[|}] # end if we lookahead to a single pipe or close brace
+        )
+      </End>
     </Span>
 
     <!-- elif -->
