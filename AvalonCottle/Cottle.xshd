@@ -33,7 +33,7 @@
     <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
 
     <!-- code -->
-    <Span color="Code" fontFamily="Consolas" multiline="true" ruleSet="Code">
+    <Span color="Code" multiline="true" ruleSet="Code">
       <Begin color="Delimiter">{</Begin>
       <End color="Delimiter">}</End>
     </Span>
@@ -262,12 +262,48 @@
   <RuleSet name="Custom functions">
     <Keywords color="Custom functions">
       <Word>SetState</Word>
+      <Word>BlueprintDetails</Word>
+      <Word>BodyDetails</Word>
+      <Word>CombatRatingDetails</Word>
+      <Word>Distance</Word>
+      <Word>EconomyDetails</Word>
+      <Word>Emphasize</Word>
+      <Word>EmpireRatingDetails</Word>
+      <Word>ExplorationRatingDetails</Word>
+      <Word>F</Word>
+      <Word>FederationRatingDetails</Word>
+      <Word>GalnetNewsArticle</Word>
+      <Word>GalnetNewsArticles</Word>
+      <Word>GalnetNewsDelete</Word>
+      <Word>GalnetNewsMarkRead</Word>
+      <Word>GalnetNewsMarkUnread</Word>
+      <Word>GovernmentDetails</Word>
       <Word>Humanise</Word>
+      <Word>ICAO</Word>
+      <Word>List</Word>
+      <Word>Log</Word>
+      <Word>MaterialDetails</Word>
       <Word>Occasionally</Word>
       <Word>OneOf</Word>
       <Word>P</Word>
-      <Word>F</Word>
-      <!-- etc... -->
+      <Word>Pause</Word>
+      <Word>Play</Word>
+      <Word>SecondsSince</Word>
+      <Word>SecurityLevelDetails</Word>
+      <Word>SetState</Word>
+      <Word>ShipCallsign</Word>
+      <Word>ShipDetails</Word>
+      <Word>ShipName</Word>
+      <Word>Spacialise</Word>
+      <Word>SpeechPitch</Word>
+      <Word>SpeechRate</Word>
+      <Word>SpeechVolume</Word>
+      <Word>StartsWithVowel</Word>
+      <Word>StateDetails</Word>
+      <Word>StationDetails</Word>
+      <Word>SuperpowerDetails</Word>
+      <Word>SystemDetails</Word>
+      <Word>TradeRatingDetails</Word>
     </Keywords>
   </RuleSet>
 
