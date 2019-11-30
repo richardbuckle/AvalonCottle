@@ -149,22 +149,22 @@
 
   <RuleSet name="Built-in keywords">
     <Keywords color="Keyword">
-      <Word>if</Word>
+      <Word>and</Word>
+      <Word>dump</Word>
+      <Word>echo</Word>
       <Word>elif</Word>
       <Word>else</Word>
-      <Word>for</Word>
-      <Word>while</Word>
       <Word>empty</Word>
+      <Word>for</Word>
+      <Word>if</Word>
       <Word>in</Word>
+      <Word>is</Word>
+      <Word>not</Word>
+      <Word>or</Word>
+      <Word>return</Word>
       <Word>set</Word>
       <Word>to</Word>
-      <Word>is</Word>
-      <Word>echo</Word>
-      <Word>dump</Word>
-      <Word>and</Word>
-      <Word>or</Word>
-      <Word>not</Word>
-      <Word>return</Word>
+      <Word>while</Word>
     </Keywords>
   </RuleSet>
 
