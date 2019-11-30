@@ -6,6 +6,8 @@
 Keywords like void, if and else have no meaning in body text.
 Literals like 2.3 and keywords like else are not colored in body text.
 
+You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
+
 {_ A comment can backslash-escape \|, \{, \} and \\ }
 
 {dump("Double-quoted string with \"escape\" codes can use 'single' quotes.")}
@@ -14,12 +16,15 @@ Literals like 2.3 and keywords like else are not colored in body text.
 {set ultimateAnswer to 42}
 {set approximateAnswer to 42.0001}
 {set x to true}
-{if 1 is true or "a" is void: yay |else: nay}
+{if 1 is true or "a" is void: yay |elif a is b: meh |else: nay} is the verdict.
+
+{_ if doesn't end on || }
+{if 1 || 2: yes } and body text.
 
 {_ test a compound if}
 {if x < 3 : less than three 
   |elif x > 10 : 
-  {if x > 50: an army of | else: rather many} 
+  {if x > 50: an army of |else: rather many} 
   |else: a troop of
 } mulefas.
 
@@ -29,6 +34,9 @@ Literals like 2.3 and keywords like else are not colored in body text.
 |empty:
     Result: {when(false, "no message", "error {error.text}")}
 }
+
+{_ test Custom function name}
+{Humanise(event.amount)} credits
 
 {_ test Custom function name}
 {if singular: voucher |else: vouchers} for {Humanise(event.amount)} credits
@@ -55,7 +63,7 @@ Literals like 2.3 and keywords like else are not colored in body text.
     {F("Bodies to map")}
 }
 
-{_ issue #10: incorrectly highlighing keywords within words }
+{_ issue #10: incorrectly highlighting keywords within words }
 {set zforz to void}
 {set zinz to void}
 {set zwhilez to void}
