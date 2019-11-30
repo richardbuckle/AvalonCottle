@@ -54,7 +54,7 @@
     </Span>
   </RuleSet>
 
-    <!-- The Code rule set. It can contain code, literals, comments and keywords. Certain keywords can recurse us back to a body text span. -->
+  <!-- The Code rule set. It can contain code, literals, comments and keywords. Certain keywords can recurse us back to a body text span. -->
   <RuleSet name="Code">
     <Import ruleSet="Escape sequences"/>
     <Import ruleSet="Literals"/>
@@ -86,47 +86,37 @@
 
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(if)\b</Begin>
-      <End color="Delimiter">
-        (
-        (?!\|\|) # do not end on a double pipe (logical or)
-        ?=[|}] # end if we lookahead to a single pipe or close brace
-        )
-      </End>
+      <Begin color="Keyword">\b(?:if)\b</Begin>
+      <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- elif -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(elif)\b</Begin>
-      <End color="Delimiter">
-        (
-        (?!\|\|) # do not end on a double pipe (logical or)
-        ?=[|}] # end if we lookahead to a single pipe or close brace
-        )
-      </End>
+      <Begin color="Keyword">\b(?:elif)\b</Begin>
+      <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- else -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(else)\b</Begin>
+      <Begin color="Keyword">\b(?:else)\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
 
     <!-- for -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(for)\b</Begin>
+      <Begin color="Keyword">\b(?:for)\b</Begin>
       <End color="Delimiter">(?=[|}])</End>
     </Span>
 
     <!-- empty -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(empty)\b</Begin>
+      <Begin color="Keyword">\b(?:empty)\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
 
     <!-- while -->
     <Span ruleSet="Predicate statement" multiline="true">
-      <Begin color="Keyword">\b(while)\b</Begin>
+      <Begin color="Keyword">\b(?:while)\b</Begin>
       <End color="Delimiter">(?=})</End>
     </Span>
   </RuleSet>
