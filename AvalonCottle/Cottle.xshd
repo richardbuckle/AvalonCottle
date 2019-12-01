@@ -11,7 +11,7 @@
   <Color name="Comment" foreground="Green" fontStyle="italic" exampleText="{_ This is a comment. }"/>
   <Color name="Code" foreground="Purple" exampleText="{ variableName }"/>
   <Color name="Delimiter" foreground="Purple" fontWeight="bold" exampleText="{ | }"/>
-  <Color name="EscapeDelimiter" foreground="Orchid" exampleText="{ \\} }"/>
+  <Color name="EscapeDelimiter" foreground="Orchid" exampleText="{ \} }"/>
   <Color name="Keyword" foreground="MediumVioletRed" exampleText="{ set ultimate answer to 42 }"/>
   <Color name="Quote mark" foreground="Blue" exampleText="{ '' }"/>
   <Color name="Operator" foreground="Blue" exampleText="{ a + b }"/>
