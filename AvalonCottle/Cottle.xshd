@@ -7,18 +7,18 @@
   <https://www.codeproject.com/Articles/42490/Using-AvalonEdit-WPF-Text-Editor?msg=4879049#xx4879049xx> 
   -->
   
-  <Color name="Body text" foreground="DarkSlateGray"/>
-  <Color name="Comment" foreground="Green" fontStyle="italic"/>
-  <Color name="Code" foreground="Purple"/>
-  <Color name="Delimiter" foreground="Purple" fontWeight="bold"/>
-  <Color name="EscapeDelimiter" foreground="Orchid"/>
-  <Color name="Keyword" foreground="MediumVioletRed"/>
-  <Color name="Quote mark" foreground="Blue"/>
-  <Color name="Operator" foreground="Blue"/>
-  <Color name="Literals" foreground="Blue"/>
-  <Color name="Built-in functions" foreground="MediumOrchid" fontWeight="bold"/>
-  <Color name="Custom functions" foreground="DodgerBlue"/>
-  <Color name="Custom properties" foreground="LightSeaGreen"/>
+  <Color name="Body text" foreground="DarkSlateGray" exampleText="This is body text"/>
+  <Color name="Comment" foreground="Green" fontStyle="italic" exampleText="{_ This is a comment. }"/>
+  <Color name="Code" foreground="Purple" exampleText="{ variableName }"/>
+  <Color name="Delimiter" foreground="Purple" fontWeight="bold" exampleText="{ | }"/>
+  <Color name="EscapeDelimiter" foreground="Orchid" exampleText="{ \\} }"/>
+  <Color name="Keyword" foreground="MediumVioletRed" exampleText="{ set ultimate answer to 42 }"/>
+  <Color name="Quote mark" foreground="Blue" exampleText="{ '' }"/>
+  <Color name="Operator" foreground="Blue" exampleText="{ a + b }"/>
+  <Color name="Literals" foreground="Blue" exampleText="{ 42.0 }"/>
+  <Color name="Built-in functions" foreground="MediumOrchid" fontWeight="bold" exampleText="{ abs(-42) }"/>
+  <Color name="Custom functions" foreground="DodgerBlue" exampleText="{ Humanise(text) }"/>
+  <Color name="Custom properties" foreground="LightSeaGreen" exampleText="{ event.awardingfaction }"/>
 
   <!-- The main rule set: it states that Cottle docs always begin as body text. -->
   <RuleSet>
