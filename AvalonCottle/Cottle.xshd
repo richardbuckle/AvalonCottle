@@ -251,7 +251,6 @@
 
   <RuleSet name="Custom functions">
     <Keywords color="Custom functions">
-      <Word>SetState</Word>
       <Word>BlueprintDetails</Word>
       <Word>BodyDetails</Word>
       <Word>CombatRatingDetails</Word>
