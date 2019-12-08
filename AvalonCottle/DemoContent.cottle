@@ -19,7 +19,7 @@ You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
 {if 1 is true or "a" is void: yay |elif a is b: meh |else: nay} is the verdict.
 
 {_ if doesn't end on || }
-{if 1 || 2: yes } and body text.
+{if 1 || 2: yes {void} |elif 3: maybe |else: no } and body text.
 
 {_ test a compound if}
 {if x < 3 : less than three 
