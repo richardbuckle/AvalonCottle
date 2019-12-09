@@ -68,3 +68,21 @@ You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
 {set zinz to void}
 {set zwhilez to void}
 {set zifz to void}
+
+{_ None of this should be body text _}
+{if true:
+    {if true: 
+        {set v1 to: {test}}
+    }
+|elif false:
+    {if true: 
+        {set v2 to: {test2}}
+    }
+|else:
+    {if true: 
+        {set v3 to: {test3}}
+    }
+}
+
+{_ None of these brackets should be body text _}
+{{}}
