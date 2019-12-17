@@ -9,6 +9,7 @@ Literals like 2.3 and keywords like else are not colored in body text.
 You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
 
 {_ A comment can backslash-escape \|, \{, \} and \\ }
+{ _ White space is allowed between the opening brace and the underscore.}
 
 {dump("Double-quoted string with \"escape\" codes can use 'single' quotes.")}
 {dump('Single-quoted string with \'escape\' codes can use "double" quotes.')}
@@ -20,6 +21,8 @@ You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
 
 {_ if doesn't end on || }
 {if 1 || 2: yes {void} |elif 3: maybe |else: no } and body text.
+{_ regardless of whitespace }
+{if 1||2:yes {void}|elif 3:maybe|else:no} and body text.
 
 {_ test a compound if}
 {if x < 3 : less than three 
@@ -69,20 +72,20 @@ You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
 {set zwhilez to void}
 {set zifz to void}
 
-{_ None of this should be body text _}
+{_ None of this should be body text}
 {if true:
     {if true: 
-        {set v1 to: {test}}
+        {set f1() to: {test}}
     }
 |elif false:
     {if true: 
-        {set v2 to: {test2}}
+        {set f1() to: {test2}}
     }
 |else:
     {if true: 
-        {set v3 to: {test3}}
+        {set f1() to: {test3}}
     }
 }
 
-{_ None of these brackets should be body text _}
-{{}}
+{_ Arbitrary nesting of code blocks is a syntax error}
+{{echo 42}}
