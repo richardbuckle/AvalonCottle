@@ -88,6 +88,12 @@
       <End color="Quote mark">'</End>
     </Span>
 
+    <!-- set (both value and function assignment) -->
+    <Span ruleSet="Set statement" multiline="true">
+      <Begin color="Keyword">\b(?:set)\b</Begin>
+      <End color="Delimiter">(?=})</End>
+    </Span>
+
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">\b(?:if)\b</Begin>
@@ -139,6 +145,15 @@
     <Span>
       <Begin color="EscapeDelimiter">\\</Begin>
       <End>.</End>
+    </Span>
+  </RuleSet>
+
+  <!-- The Set statement ruleset is used for both function assignment, which takes body text, and value assignment, which takes an expression -->
+  <RuleSet name="Set statement">
+    <Import ruleSet="Code"/>
+    <Span ruleSet="Body text" color="Body text" multiline="true">
+      <Begin color="Keyword">to\s*:</Begin>
+      <End>(?=})</End>
     </Span>
   </RuleSet>
 

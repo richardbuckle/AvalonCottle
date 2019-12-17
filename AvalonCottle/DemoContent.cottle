@@ -38,6 +38,14 @@ You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
     Result: {when(false, "no message", "error {error.text}")}
 }
 
+{_ test function assignment}
+{set f() to : 
+body text 
+    {
+        code
+    }
+}
+
 {_ test Custom function name}
 {Humanise(event.amount)} credits
 
