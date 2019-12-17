@@ -30,7 +30,7 @@
     <Import ruleSet="Escape sequences"/>
 
     <!-- comments -->
-    <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
+    <Span color="Comment" multiline="true" begin="{\s*_" end="}" ruleSet="Comment"/>
 
     <!-- code -->
     <Span color="Code" multiline="true" ruleSet="Code">
@@ -65,7 +65,7 @@
     <Import ruleSet="Custom properties"/>
 
     <!-- comments -->
-    <Span color="Comment" multiline="true" begin="{_" end="}" ruleSet="Comment"/>
+    <Span color="Comment" multiline="true" begin="{\s*_" end="}" ruleSet="Comment"/>
 
     <!-- delimiters -->
     <Rule color="Delimiter">
