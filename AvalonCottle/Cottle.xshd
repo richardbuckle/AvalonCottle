@@ -50,7 +50,10 @@
     <Import ruleSet="Code"/>
     <Span ruleSet="Body text" color="Body text" multiline="true">
       <Begin color="Delimiter">:</Begin>
-      <End color="Delimiter">(?=[|}])</End>
+      <End color="Delimiter">
+        (?&lt;!\|)\|(?!\|)  # single pipe not preceded or followed by another pipe
+        | (?=}) # lookahead to a closing brace
+      </End>
     </Span>
   </RuleSet>
 
@@ -87,13 +90,19 @@
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">\b(?:if)\b</Begin>
-      <End color="Delimiter">(?=[|}])</End>
+      <End color="Delimiter">
+        (?&lt;!\|)\|(?!\|)  # single pipe not preceded or followed by another pipe
+        | (?=}) # lookahead to a closing brace
+      </End>
     </Span>
 
     <!-- elif -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">\b(?:elif)\b</Begin>
-      <End color="Delimiter">(?=[|}])</End>
+      <End color="Delimiter">
+        (?&lt;!\|)\|(?!\|)  # single pipe not preceded or followed by another pipe
+        | (?=}) # lookahead to a closing brace
+      </End>
     </Span>
 
     <!-- else -->
@@ -105,7 +114,10 @@
     <!-- for -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">\b(?:for)\b</Begin>
-      <End color="Delimiter">(?=[|}])</End>
+      <End color="Delimiter">
+        (?&lt;!\|)\|(?!\|)  # single pipe not preceded or followed by another pipe
+        | (?=}) # lookahead to a closing brace
+      </End>
     </Span>
 
     <!-- empty -->
