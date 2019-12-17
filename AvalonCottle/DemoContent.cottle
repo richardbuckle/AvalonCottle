@@ -19,7 +19,14 @@ can be multi-line.")}
 {set ultimateAnswer to 42}
 {set approximateAnswer to 42.0001}
 {set x to true}
+{set dictionary to ["a": "Alpha", "b": "Bravo"]}
 {if 1 is true or "a" is void: yay |elif a is b: meh |else: nay} is the verdict.
+
+{set reportPlanetTypes to [
+    "Earth-like world": true,
+    "Gas giant with ammonia based life": false,
+]}
+
 
 {_ if doesn't end on || }
 {if 1 || 2: yes {void} |elif 3: maybe |else: no } and body text.

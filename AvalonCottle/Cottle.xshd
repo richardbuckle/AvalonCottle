@@ -157,6 +157,12 @@
     </Span>
   </RuleSet>
 
+  <!-- Rule set for the colons in map literals not to be flagged as unexpected -->
+  <RuleSet name="Map Literals">
+    <Import ruleSet="Code"/>
+    <Span color="Delimiter" begin=":" end=""/>
+  </RuleSet>
+
   <RuleSet name="Literals">
     <!-- Digits -->
     <Rule color="Literals">
@@ -166,9 +172,15 @@
       )
     </Rule>
 
+    <!-- Maps -->
+    <Span ruleSet="Map Literals" multiline="true">
+      <Begin color="Operator">\[</Begin>
+      <End color="Operator">]</End>
+    </Span>
+
     <!-- String literals are treated as body text -->
 
-    <!-- Other literals-->
+    <!-- Other literals -->
     <Keywords color="Literals">
       <Word>true</Word>
       <Word>false</Word>
