@@ -159,7 +159,6 @@
     </Span>
   </RuleSet>
 
-
   <!-- The Predicate statement rule set is used in statements such as `if` and `elif`.
   It says that we start with code (the predicate) until the first unescaped colon, and everything after that is recursive body text. -->
   <RuleSet name="Predicate statement">
