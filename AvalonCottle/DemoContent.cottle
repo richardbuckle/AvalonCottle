@@ -47,6 +47,12 @@ can be multi-line.")}
     Result: {when(false, "no message", "error {error.text}")}
 }
 
+{_ test while loops}
+{while len(result) < min_length:
+    Text
+    {set result to cat(result, words[rand(len(words))])}
+}
+
 {_ test function assignment}
 {set f() to : 
 body text 
