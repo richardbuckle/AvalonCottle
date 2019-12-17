@@ -64,13 +64,13 @@
     </Rule>
 
     <!-- String literals are treated as body text -->
-    <Span color="Body text" ruleSet="Body text">
+    <Span color="Body text" ruleSet="Body text" multiline="true">
       <Begin color="Quote mark">"</Begin>
       <End color="Quote mark">"</End>
     </Span>
 
     <!-- Same for single-quoted strings -->
-    <Span color="Body text" ruleSet="Body text">
+    <Span color="Body text" ruleSet="Body text" multiline="true">
       <Begin color="Quote mark">'</Begin>
       <End color="Quote mark">'</End>
     </Span>

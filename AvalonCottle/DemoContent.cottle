@@ -13,6 +13,8 @@ You can use either {mymap.f1} or {mymap["f2"]} notations for map values.
 
 {dump("Double-quoted string with \"escape\" codes can use 'single' quotes.")}
 {dump('Single-quoted string with \'escape\' codes can use "double" quotes.')}
+{dump("String literals
+can be multi-line.")}
 
 {set ultimateAnswer to 42}
 {set approximateAnswer to 42.0001}
