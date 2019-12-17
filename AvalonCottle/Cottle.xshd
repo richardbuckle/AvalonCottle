@@ -81,6 +81,12 @@
       <End color="Delimiter">(?=})</End>
     </Span>
 
+    <!-- declare (both value and function declaration) -->
+    <Span ruleSet="Declare statement" multiline="true">
+      <Begin color="Keyword">\b(?:declare)\b</Begin>
+      <End color="Delimiter">(?=})</End>
+    </Span>
+
     <!-- if -->
     <Span ruleSet="Predicate statement" multiline="true">
       <Begin color="Keyword">\b(?:if)\b</Begin>
@@ -143,6 +149,16 @@
       <End>(?=})</End>
     </Span>
   </RuleSet>
+
+  <!-- The Declare statement rule set is used for both function declaration, which takes body text, and variable declaration, which takes an expression -->
+  <RuleSet name="Declare statement">
+    <Import ruleSet="Code"/>
+    <Span ruleSet="Body text" color="Body text" multiline="true">
+      <Begin color="Keyword">as\s*:</Begin>
+      <End>(?=})</End>
+    </Span>
+  </RuleSet>
+
 
   <!-- The Predicate statement rule set is used in statements such as `if` and `elif`.
   It says that we start with code (the predicate) until the first unescaped colon, and everything after that is recursive body text. -->

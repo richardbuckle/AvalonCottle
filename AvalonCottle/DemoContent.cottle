@@ -55,6 +55,11 @@ body text
     }
 }
 
+{declare variable as 42}
+{declare by_items(a, b) as:
+    {return cmp(len(split(b, ",")), len(split(a, ",")))}
+}
+
 {_ test Custom function name}
 {Humanise(event.amount)} credits
 
