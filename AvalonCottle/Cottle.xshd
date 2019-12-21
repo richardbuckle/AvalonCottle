@@ -136,7 +136,7 @@
   
     <!-- Custom properties need to be invoked using the property accessor `.` before they become accessible -->
     <Span ruleSet="Custom properties" multiline="true">
-      <Begin>(?&lt;=\.)</Begin>
+      <Begin color="Delimiter">\.\s*</Begin>
       <End>(?=\W)</End>
     </Span>  
   
