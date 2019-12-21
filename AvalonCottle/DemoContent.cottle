@@ -117,3 +117,6 @@ body text
 
 {_ Arbitrary nesting of code blocks is a syntax error}
 {{echo 42}}
+
+{_ issue #12: Code in an escaped string should not cause syntax errors}
+{OneOf("{OneOf(\"{code} in this body text should not create a syntax error.\")}")}
