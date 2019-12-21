@@ -108,6 +108,20 @@
             SyntaxHighlighting="Cottle"
         >
             Welcome to AvalonEdit! Use Ctrl+F to search and dot to demo text completion.
+            <avalonEdit:TextEditor.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="ApplicationCommands.Undo"/>
+                    <MenuItem Command="ApplicationCommands.Redo"/>
+                    <Separator/>
+                    <MenuItem Command="ApplicationCommands.Cut"/>
+                    <MenuItem Command="ApplicationCommands.Copy"/>
+                    <MenuItem Command="ApplicationCommands.Paste"/>
+                    <MenuItem Command="ApplicationCommands.Delete"/>
+                    <MenuItem Header="Delete Line" Command="avalonEdit:AvalonEditCommands.DeleteLine"/>
+                    <Separator/>
+                    <MenuItem Command="ApplicationCommands.Find"/>
+                </ContextMenu>
+            </avalonEdit:TextEditor.ContextMenu>
         </avalonEdit:TextEditor>
     </DockPanel>
 </Window>
