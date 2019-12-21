@@ -117,3 +117,6 @@ body text
 
 {_ Arbitrary nesting of code blocks is a syntax error}
 {{echo 42}}
+
+{_ issue #13: custom property highlighting should only be used when the property accessor is invoked}
+{remaining} should not trigger custom property highlighting, but {event.remaining} should.
